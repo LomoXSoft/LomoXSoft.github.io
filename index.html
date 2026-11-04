@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LomoXSoft · Software libre y juegos pixel art</title>
+<meta name="description" content="Portfolio de LomoXSoft: software libre para Windows y videojuegos pixel art bajo LomoXGames.">
+<meta name="theme-color" content="#0e1020">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LomoXSoft">
+<meta property="og:description" content="Software libre para todos. Y algún que otro píxel.">
+<meta property="og:url" content="https://lomoxsoft.github.io/">
+<meta property="og:image" content="https://lomoxsoft.github.io/img/og.png">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+
+<header class="hero">
+  <nav class="top">
+    <a class="marca" href="#"><img src="img/favicon-32.png" alt="" width="24" height="24">LomoXSoft</a>
+    <div class="enlaces"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="https://github.com/LomoXSoft">GitHub</a></div>
+  </nav>
+  <div class="hero-in">
+    <div class="avatar"><img src="img/lomorsin.png" alt="Lomorsin, la mascota pixel art de LomoXSoft" width="256" height="256"></div>
+    <div>
+      <p class="pre">&gt; hola, mundo_</p>
+      <h1>LomoX<span>Soft</span></h1>
+      <p class="lema">Software libre para todos.<br>Y algún que otro píxel.</p>
+      <div class="cta"><a class="btn" href="#proyectos">Ver proyectos ▼</a><a class="btn alt" href="https://github.com/LomoXSoft">GitHub ↗</a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="proyectos">
+  <h2><span>01</span> Proyectos</h2>
+  <div class="rejilla">
+
+    <article class="tarjeta" style="--c:#4fd1a5">
+      <a class="foto" href="https://github.com/LomoXSoft/ContFactu"><img src="img/contfactu.png" alt="Captura de ContFactu con datos de ejemplo" loading="lazy"></a>
+      <div class="cuerpo">
+        <div class="cab"><h3>ContFactu</h3><span class="estado ok">v0.0.5</span></div>
+        <p>Programa libre de facturación para Windows, compatible con los datos de FactuCont 5. Facturas, rectificativas, cobros, libros de IVA, copias de seguridad y exportación a Excel.</p>
+        <ul class="tags"><li>Python</li><li>FastAPI</li><li>SQLite</li><li>pywebview</li><li>GPL v3</li></ul>
+        <div class="botones"><a class="btn" href="https://github.com/LomoXSoft/ContFactu/releases/latest">Descargar</a><a class="btn alt" href="https://github.com/LomoXSoft/ContFactu">Código</a></div>
+      </div>
+    </article>
+
+    <article class="tarjeta" style="--c:#7aa2ff">
+      <a class="foto" href="https://github.com/LomoXSoft/ClaustrApp"><img src="img/claustrapp.png" alt="Captura de ClaustrApp con datos inventados" loading="lazy"></a>
+      <div class="cuerpo">
+        <div class="cab"><h3>ClaustrApp</h3><span class="estado ok">v0.0.3</span></div>
+        <p>Planificador libre de horarios escolares para institutos: encaja profesorado, grupos, aulas y guardias. Compatible con archivos XML-GHC y funciona sin conexión a Internet.</p>
+        <ul class="tags"><li>Python</li><li>PySide6</li><li>OR-Tools</li><li>GPL v3</li></ul>
+        <div class="botones"><a class="btn" href="https://github.com/LomoXSoft/ClaustrApp/releases/latest">Descargar</a><a class="btn alt" href="https://github.com/LomoXSoft/ClaustrApp">Código</a></div>
+      </div>
+    </article>
+
+    <article class="tarjeta" style="--c:#ffb347">
+      <div class="foto"><img src="img/datamorfos_partida.png" alt="Captura de una partida de Datamorfos" loading="lazy"><img class="sprite" src="img/lomorsin_sprite.png" alt="" width="96" height="96"></div>
+      <div class="cuerpo">
+        <div class="cab"><h3>Datamorfos</h3><span class="estado dev">En desarrollo</span></div>
+        <p>Mi propio videojuego, bajo la marca LomoXGames: criaturas digitales que evolucionan, hordas de enemigos y jefes, todo en pixel art y con banda sonora original.</p>
+        <ul class="tags"><li>Godot 4</li><li>GDScript</li><li>Pixel art</li><li>LomoXGames</li></ul>
+      </div>
+    </article>
+
+    <article class="tarjeta" style="--c:#ff6b9a">
+      <div class="foto codigo" aria-hidden="true"><pre><span class="k">PPC</span>  lwz  r3,0x10(r1)
+<span class="k">  ↓</span>
+<span class="k">C++</span>  r3 = load32(r1+0x10);
+<span class="k">  ↓</span>
+<span class="k">x64</span>  ▶ PC moderno_</pre></div>
+      <div class="cuerpo">
+        <div class="cab"><h3>Recompilaciones estáticas</h3><span class="estado pre">1 en curso</span></div>
+        <p>Serie de proyectos de recompilación estática y preservación: llevar juegos de Xbox 360 a PC moderno, de forma nativa. Solo código fuente; cada usuario aporta su copia original.</p>
+        <ul class="tags"><li>C++</li><li>ReXGlue</li><li>Xbox 360</li><li>GPL v3</li></ul>
+        <div class="botones"><a class="btn" href="https://github.com/LomoXSoft?tab=repositories&amp;q=Recomp">Ver mis recomps</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="sobre-mi" class="dos">
+  <div>
+    <h2><span>02</span> Sobre mí</h2>
+    <p>Apasionado de la informática, la telefonía y las comunicaciones. Desarrollo software libre en mi tiempo libre.</p>
+    <p>Todo lo que publico como LomoXSoft es gratuito y de código abierto: puedes usarlo, estudiarlo y mejorarlo.</p>
+  </div>
+  <div id="apoyar" class="apoyar">
+    <h2><span>03</span> Apoyar</h2>
+    <p>Si algo de esto te resulta útil y te apetece invitarme a un café, puedes hacerlo en Ko-fi.</p>
+    <a class="btn alt" href="https://ko-fi.com/lomoxsoft">☕ Ko-fi</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="img/favicon-32.png" alt="" width="32" height="32">
+  <p>© 2026 LomoXSoft · Código de la web bajo <a href="LICENSE">GPL-3.0</a> · Fuentes Pixelify Sans y Press Start 2P (SIL OFL 1.1)</p>
+  <p><a href="https://github.com/LomoXSoft">github.com/LomoXSoft</a></p>
+</footer>
+</body>
+</html>
