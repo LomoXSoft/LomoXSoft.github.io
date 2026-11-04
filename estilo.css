@@ -14,7 +14,8 @@ img{image-rendering:pixelated;max-width:100%;display:block}
 .hero{border-bottom:4px solid var(--bd);background:radial-gradient(ellipse at 30% 60%,rgba(126,224,255,.14),transparent 60%)}
 .hero-in{max-width:1100px;margin:0 auto;padding:40px 20px 70px;display:flex;gap:48px;align-items:center}
 .avatar{flex:0 0 auto;padding:10px;background:var(--bg2);border:4px solid var(--ac);box-shadow:8px 8px 0 #000,0 0 40px rgba(126,224,255,.3);animation:flota 3s steps(6) infinite}
-.avatar img{width:240px;height:240px}
+.idle{--e:4;width:calc(54px*var(--e));height:calc(54px*var(--e));margin:12px;background:url(img/lomorsin_idle.png) 0 0/calc(1296px*var(--e)) 100% no-repeat;image-rendering:pixelated;animation:idle 3.141s steps(24) infinite}
+@keyframes idle{to{background-position-x:calc(-1296px*var(--e))}}
 @keyframes flota{50%{transform:translateY(-8px)}}
 .pre{font-family:PS2P;font-size:12px;color:var(--ac2);margin:0 0 14px}
 h1{font-family:PS2P;font-size:clamp(30px,6vw,60px);margin:0;line-height:1.15;text-shadow:5px 5px 0 #000}
@@ -57,7 +58,7 @@ footer img{margin:0 auto 10px}footer p{margin:4px 0}
 @media (max-width:760px){
  body{font-size:17px}
  .hero-in{flex-direction:column;text-align:center;gap:26px;padding:20px 20px 50px}
- .avatar img{width:170px;height:170px}
+ .idle{--e:3;margin:4px}
  .cta{justify-content:center}
  .lema{font-size:20px}
  .rejilla,.dos{grid-template-columns:1fr}
@@ -65,4 +66,4 @@ footer img{margin:0 auto 10px}footer p{margin:4px 0}
  section{padding-top:48px}
  h2{font-size:16px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.idle{background-position:0 0}}
