@@ -1054,6 +1054,29 @@ img {
   margin-bottom: 44px;
 }
 
+.dm-pills-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.dm-pills-stack .subsidiary-pill {
+  margin-bottom: 0;
+}
+
+.dm-platform-pill {
+  display: inline-block;
+  font-family: "PS2P", monospace;
+  font-size: 10px;
+  padding: 7px 12px;
+  background: #121629;
+  color: #4fd1a5;
+  border: 2px solid #4fd1a5;
+  box-shadow: 4px 4px 0 #000;
+}
+
 .dm-logo-img {
   max-width: 620px;
   width: 100%;
