@@ -619,10 +619,10 @@ img {
 
 .mat-video-card video {
   width: 100%;
-  max-height: 540px;
+  aspect-ratio: 16 / 9;
   display: block;
   background: #000;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .mat-video-caption {
