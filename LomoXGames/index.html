@@ -1,0 +1,1412 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LomoXGames · Estudio Indie de Videojuegos (División de LomoXSoft)</title>
+<meta name="description" content="LomoXGames es la división de videojuegos de LomoXSoft. Descubre Matritellus (mundo abierto 3D sobre Madridejos) y Datamorfos (bullet-heaven 2.5D con 30 criaturas digitales).">
+<meta name="theme-color" content="#080a14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LomoXGames · Matritellus &amp; Datamorfos">
+<meta property="og:description" content="División de videojuegos de LomoXSoft: Matritellus (mundo abierto manchego en 3D) y Datamorfos (supervivientes del Reino Digital en pixel art).">
+<meta property="og:url" content="https://lomoxsoft.github.io/LomoXGames/">
+<meta property="og:image" content="https://lomoxsoft.github.io/LomoXGames/img/matritellus/shots/titulo.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="scan" aria-hidden="true"></div>
+
+<!-- ==================== TOP CORPORATE & STUDIO BAR ==================== -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="crumb">
+      <a class="crumb-parent" href="../index.html" title="Volver a la matriz LomoXSoft">
+        <img class="pixel" src="../img/favicon-32.png" alt="" width="18" height="18">
+        <span>LomoXSoft</span>
+      </a>
+      <span class="crumb-sep">▸</span>
+      <a class="crumb-current" href="#top">
+        <span class="x-red">LOMO</span><span class="x-gold">X</span><span class="x-blue">GAMES</span>
+      </a>
+    </div>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#juegos" data-es="Juegos" data-en="Games">Juegos</a>
+      <a class="nav-mat" href="#matritellus">Matritellus</a>
+      <a class="nav-dm" href="#datamorfos">Datamorfos</a>
+      <a href="#datadex">Datadex</a>
+      <a href="#estudio" data-es="El Estudio" data-en="Studio">El Estudio</a>
+      <button type="button" id="langToggle" class="lang-btn" aria-label="Cambiar idioma / Switch language">ES / EN</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== STUDIO HERO & DUAL SPOTLIGHT ==================== -->
+<section id="top" class="studio-hero">
+  <div class="studio-hero-in">
+    <div class="subsidiary-pill">
+      <span>🕹️</span>
+      <span data-es="DIVISIÓN DE VIDEOJUEGOS DE LOMOXSOFT · GODOT ENGINE 4.7.2" data-en="VIDEO GAME DIVISION OF LOMOXSOFT · GODOT ENGINE 4.7.2">DIVISIÓN DE VIDEOJUEGOS DE LOMOXSOFT · GODOT ENGINE 4.7.2</span>
+    </div>
+
+    <div class="logo-stage" id="logoStage">
+      <img class="studio-logo" src="img/brand/lomo_games.png" alt="LomoXGames">
+      <div class="intro-video-wrap" id="introWrap">
+        <video id="introVideo" src="img/brand/lomoxgames_intro.mp4" playsinline></video>
+      </div>
+    </div>
+
+    <p class="studio-tagline" data-es="Mundos abiertos con denominación de origen manchega y supervivencia arcade en el Reino Digital." data-en="Open worlds with genuine Manchego roots and arcade survival in the Digital Realm.">
+      Mundos abiertos con denominación de origen manchega y supervivencia arcade en el Reino Digital.
+    </p>
+    <p class="studio-sub" data-es="100 % originales · Sin motores propietarios ni telemetría · Para Windows, Linux / Steam Deck y Android." data-en="100% original IPs · No proprietary engines or telemetry · For Windows, Linux / Steam Deck and Android.">
+      100 % originales · Sin motores propietarios ni telemetría · Para Windows, Linux / Steam Deck y Android.
+    </p>
+
+    <div class="hero-actions">
+      <button type="button" class="btn alt" id="playIntroBtn" data-es="▶ Intro del Estudio (4 s)" data-en="▶ Studio Intro (4 s)">▶ Intro del Estudio (4 s)</button>
+      <a class="btn" href="#matritellus" data-es="🌾 Ver Matritellus" data-en="🌾 Explore Matritellus">🌾 Ver Matritellus</a>
+      <a class="btn dm-btn" href="#datamorfos" data-es="⚡ Ver Datamorfos" data-en="⚡ Explore Datamorfos">⚡ Ver Datamorfos</a>
+    </div>
+
+    <!-- DUAL GAME SPOTLIGHT -->
+    <div id="juegos" class="dual-spotlight">
+
+      <!-- Card 1: MATRITELLUS -->
+      <article class="spot-card spot-mat">
+        <div class="spot-media">
+          <span class="spot-badge-top" data-es="MUNDO ABIERTO 3D · MADRIDEJOS" data-en="3D OPEN WORLD · MADRIDEJOS">MUNDO ABIERTO 3D · MADRIDEJOS</span>
+          <span class="spot-version">v0.0.21</span>
+          <img class="cover" src="img/matritellus/shots/titulo.jpg" alt="Matritellus — Un lugar de La Mancha">
+          <img class="spot-corner-icon" src="img/matritellus/crest.png" alt="Escudo de Matritellus">
+        </div>
+        <div class="spot-body">
+          <div class="spot-title-row">
+            <h2>MATRITELLUS</h2>
+            <span class="spot-sub" data-es="«Un lugar de La Mancha»" data-en="“A Place in La Mancha”">«Un lugar de La Mancha»</span>
+          </div>
+          <p data-es="Juego de mundo abierto en 3D sobre Madridejos (Toledo). Calles y casas levantadas con datos reales (Catastro, IGN, OSM) y edificios emblemáticos hechos a mano. Misiones costumbristas, Puntos Cívicos, 6 emisoras de radio, recreativos con máquinas jugables y textos en manchego de verdad (y en inglés)."
+             data-en="3D open-world game set in Madridejos (Toledo, Spain). Real streets and houses built from official cartography (Cadastre, IGN, OSM) and handcrafted landmarks. Slice-of-life quests, Civic Points, 6 live radio stations, playable arcade cabinets and genuine Manchego dialogue (with full English localization).">
+            Juego de mundo abierto en 3D sobre Madridejos (Toledo). Calles y casas levantadas con datos reales (Catastro, IGN, OSM) y edificios emblemáticos hechos a mano. Misiones costumbristas, Puntos Cívicos, 6 emisoras de radio, recreativos con máquinas jugables y textos en manchego de verdad (y en inglés).
+          </p>
+          <ul class="spot-tags">
+            <li>Godot 4.7.2</li>
+            <li>Mundo abierto 3D</li>
+            <li>Catastro + OSM</li>
+            <li>Windows · Android · Linux</li>
+          </ul>
+          <div class="spot-actions">
+            <a class="btn" href="#matritellus" data-es="Ficha y Tráiler ▼" data-en="Details &amp; Trailer ▼">Ficha y Tráiler ▼</a>
+            <a class="btn alt" href="#matritellus-descargas" data-es="Descargas v0.0.21" data-en="Downloads v0.0.21">Descargas v0.0.21</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: DATAMORFOS -->
+      <article class="spot-card spot-dm">
+        <div class="spot-media">
+          <span class="spot-badge-top" data-es="BULLET HEAVEN 2.5D · PIXEL ART" data-en="2.5D BULLET HEAVEN · PIXEL ART">BULLET HEAVEN 2.5D · PIXEL ART</span>
+          <span class="spot-version">v0.4.6c</span>
+          <img class="cover" src="img/datamorfos/shots/rey_virus_omega.jpg" alt="Datamorfos — Supervivientes del Reino Digital">
+          <img class="spot-corner-icon pixel" src="img/datamorfos/criaturas/brasa_4.png" alt="Solardrakón">
+        </div>
+        <div class="spot-body">
+          <div class="spot-title-row">
+            <h2>DATAMORFOS</h2>
+            <span class="spot-sub" data-es="«Supervivientes del Reino Digital»" data-en="“Survivors of the Digital Realm”">«Supervivientes del Reino Digital»</span>
+          </div>
+          <p data-es="Supervivencia frenética por hordas con 6 líneas de criaturas digitales originales que evolucionan en 5 etapas (30 formas) en mitad del combate. 5 mapas 2.5D, jefes multifase hasta Ezra Kernel IV, 31 ataques con sinergias, Laboratorio, Árbol de Nucleomorfos y banda sonora sintetizada por código."
+             data-en="Frenetic horde-survival bullet-heaven featuring 6 original digital creature lines that evolve across 5 stages (30 forms) mid-run. 5 2.5D realms, multi-phase bosses up to Ezra Kernel IV, 31 attacks with combo synergies, Lab, Nucleomorph Tree and a code-synthesized dynamic soundtrack.">
+            Supervivencia frenética por hordas con 6 líneas de criaturas digitales originales que evolucionan en 5 etapas (30 formas) en mitad del combate. 5 mapas 2.5D, jefes multifase hasta Ezra Kernel IV, 31 ataques con sinergias, Laboratorio, Árbol de Nucleomorfos y banda sonora sintetizada por código.
+          </p>
+          <ul class="spot-tags">
+            <li>Godot 4.7.2</li>
+            <li>30 Criaturas · 5 Etapas</li>
+            <li>5 Mapas 2.5D</li>
+            <li>BSO Sintetizada</li>
+          </ul>
+          <div class="spot-actions">
+            <a class="btn dm-btn" href="#datamorfos" data-es="Ficha Completa ▼" data-en="Full Overview ▼">Ficha Completa ▼</a>
+            <a class="btn dm-alt" href="#datadex" data-es="Abrir Datadex (30)" data-en="Open Datadex (30)">Abrir Datadex (30)</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WORLD 1: MATRITELLUS ==================== -->
+<div class="tejas-border" aria-hidden="true"></div>
+<section id="matritellus" class="world-matritellus">
+  <div class="mat-container">
+
+    <header class="mat-header">
+      <span class="mat-kicker" data-es="JUEGO 01 · MUNDO ABIERTO COSTUMBRISTA EN 3D" data-en="GAME 01 · 3D SLICE-OF-LIFE OPEN WORLD">JUEGO 01 · MUNDO ABIERTO COSTUMBRISTA EN 3D</span>
+      <div class="mat-crest-row">
+        <img class="mat-crest" src="img/matritellus/crest.png" alt="Escudo de Matritellus">
+        <img class="mat-title-img" src="img/matritellus/title.png" alt="Matritellus">
+      </div>
+      <p class="mat-lead" data-es="Madridejos (Toledo), como nunca lo habías recorrido: cada calle, cuesta y fachada horneada desde datos reales, vecinos con horario y memoria, seis emisoras de radio, recreativos abiertos hasta las dos de la mañana y el motín de los jueves por el jamón asao."
+         data-en="Madridejos (Toledo), like you've never seen it before: every street, slope and facade baked from real geographic data, neighbours with daily schedules and memory, six radio stations, an arcade hall open till 2 AM and Thursday brawls for roasted ham.">
+        Madridejos (Toledo), como nunca lo habías recorrido: cada calle, cuesta y fachada horneada desde datos reales, vecinos con horario y memoria, seis emisoras de radio, recreativos abiertos hasta las dos de la mañana y el motín de los jueves por el jamón asao.
+      </p>
+    </header>
+
+    <!-- HERO GRID: TRAILER + OVERVIEW & DOWNLOADS -->
+    <div class="mat-hero-grid">
+      <div>
+        <div class="mat-video-card">
+          <video controls preload="metadata" poster="img/matritellus/shots/titulo.jpg">
+            <source src="img/matritellus/trailer.mp4" type="video/mp4">
+          </video>
+          <div class="mat-video-caption">
+            <span data-es="🎬 Tráiler oficial de Matritellus (con audio)" data-en="🎬 Official Matritellus Trailer (with audio)">🎬 Tráiler oficial de Matritellus (con audio)</span>
+            <span>Godot 4.7.2 · 60 FPS</span>
+          </div>
+        </div>
+        <div class="mat-stats-strip">
+          <div class="mat-stat">
+            <strong>1.950 m</strong>
+            <span data-es="Radio del pueblo" data-en="Town map radius">Radio del pueblo</span>
+          </div>
+          <div class="mat-stat">
+            <strong>6</strong>
+            <span data-es="Emisoras en vivo" data-en="Live radio stations">Emisoras en vivo</span>
+          </div>
+          <div class="mat-stat">
+            <strong>983 OK</strong>
+            <span data-es="Pruebas automáticas" data-en="Automated selftests">Pruebas automáticas</span>
+          </div>
+          <div class="mat-stat">
+            <strong>ES / EN</strong>
+            <span data-es="Manchego e inglés" data-en="Manchego &amp; English">Manchego e inglés</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mat-overview-card">
+        <h3 data-es="¿Y tú de quién eres?" data-en="And whose kid are you?">¿Y tú de quién eres?</h3>
+        <p data-es="Empiezas creando a tu vecino (peinado, cejas, barba, gorra o parpusa, ropa, calzado y el pañuelo de una de las seis peñas del pueblo), te apuntas en el Padrón Municipal y sales a la calle desde tu casa heredada."
+           data-en="Start by creating your neighbour (hairstyle, eyebrows, beard, flat cap, clothes, shoes and the scarf of one of the town's six festival peñas), register at the Municipal Roll and step out from your inherited house.">
+          Empiezas creando a tu vecino (peinado, cejas, barba, gorra o parpusa, ropa, calzado y el pañuelo de una de las seis peñas del pueblo), te apuntas en el Padrón Municipal y sales a la calle desde tu casa heredada.
+        </p>
+        <p data-es="A partir de ahí, el pueblo está vivo: tienes que pagar a plazos en el cajero los 10.000 € de Hacienda por la herencia de la Eufrasia, reformar tu casa en seis fases con Edmundo Monedero, echar una mano a Alberto para salvar el puente con Puntos Cívicos (P.C.) o repartir pedidos para Don Luis, Henry y Pollos Asados Javi."
+           data-en="From there, the town is alive: pay off the €10,000 tax bill for Eufrasia's inheritance at the ATM, renovate your house across six stages with Edmundo Monedero, help Alberto save the bridge using Civic Points (P.C.), or run deliveries for Don Luis, Henry and Javi's Roast Chickens.">
+          A partir de ahí, el pueblo está vivo: tienes que pagar a plazos en el cajero los 10.000 € de Hacienda por la herencia de la Eufrasia, reformar tu casa en seis fases con Edmundo Monedero, echar una mano a Alberto para salvar el puente con Puntos Cívicos (P.C.) o repartir pedidos para Don Luis, Henry y Pollos Asados Javi.
+        </p>
+
+        <div class="mat-dialogue-sample">
+          <span class="dlg-speaker" data-es="Diálogo en el juego (con código de colores real)" data-en="In-game dialogue (with real colour coding)">Diálogo en el juego (con código de colores real)</span>
+          <span data-es="«Oye, acércate en un voleo a " data-en="“Hey, run over to ">«Oye, acércate en un voleo a </span>
+          <span class="loc-blue">La Cocina de Henry</span>
+          <span data-es=" a por el " data-en=" and grab the "> a por el </span>
+          <span class="obj-green" data-es="jamón asao" data-en="roasted ham">jamón asao</span>
+          <span data-es=" de la " data-en=" for "> de la </span>
+          <span class="npc-red">Josefa</span>
+          <span data-es=". ¡Pero llévate el bate, que hoy es jueves y está to el pueblo amotinao en la puerta!»" data-en=". But bring the bat—it's Thursday and half the town is rioting at the door!”">. ¡Pero llévate el bate, que hoy es jueves y está to el pueblo amotinao en la puerta!»</span>
+        </div>
+
+        <div id="matritellus-descargas" class="mat-dl-box">
+          <div class="mat-dl-head">
+            <strong data-es="INSTALADORES MULTIPLATAFORMA" data-en="CROSS-PLATFORM INSTALLERS">INSTALADORES MULTIPLATAFORMA</strong>
+            <span class="mat-dl-badge">v0.0.21 · 22/11/2026</span>
+          </div>
+          <div class="mat-dl-grid">
+            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+              <span class="dl-os">🪟 Windows</span>
+              <span class="dl-ext">Instalador .exe</span>
+            </a>
+            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+              <span class="dl-os">🤖 Android</span>
+              <span class="dl-ext">Paquete .apk</span>
+            </a>
+            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+              <span class="dl-os">🐧 Linux / Steam</span>
+              <span class="dl-ext">.tar.gz + script</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 BENTO PILLARS -->
+    <h3 class="mat-section-title">
+      <span class="num">01</span>
+      <span data-es="Los 4 pilares de Matritellus" data-en="The 4 Pillars of Matritellus">Los 4 pilares de Matritellus</span>
+    </h3>
+
+    <div class="mat-bento">
+      <article class="mat-pillar">
+        <div class="mat-pillar-top">
+          <span class="mat-pillar-icon">🏛️</span>
+          <h4 data-es="Un pueblo real levantado con Catastro, IGN y mano artesana" data-en="A Real Town Built from Cadastre Data, DEM &amp; Handcrafted Art">Un pueblo real levantado con Catastro, IGN y mano artesana</h4>
+        </div>
+        <p data-es="El trazado, las alturas del terreno, el sentido único de las calles y miles de fachadas salen de datos reales cotejados con fotografías. Y los rincones emblemáticos están modelados a mano pieza a pieza, muchos con interior visitable."
+           data-en="Street layouts, terrain elevation, one-way traffic rules and thousands of house fronts come from real cartography verified against photos. Emblematic landmarks are handcrafted piece by piece, many with explorable interiors.">
+          El trazado, las alturas del terreno, el sentido único de las calles y miles de fachadas salen de datos reales cotejados con fotografías. Y los rincones emblemáticos están modelados a mano pieza a pieza, muchos con interior visitable.
+        </p>
+        <ul class="mat-chip-list">
+          <li>Plaza del Ayuntamiento</li>
+          <li>Iglesia del Pretil</li>
+          <li>Silo del Tío Anaranjao</li>
+          <li>Molino del Tío Gerardo</li>
+          <li>Cruce de los Semáforos y Sopiss</li>
+          <li>Convento de Santa Ana</li>
+          <li>Ermita del Cristo del Prado</li>
+          <li>Antigua Plaza de Toros</li>
+        </ul>
+      </article>
+
+      <article class="mat-pillar">
+        <div class="mat-pillar-top">
+          <span class="mat-pillar-icon">🌾</span>
+          <h4 data-es="Puntos Cívicos, líneas de misiones, trabajos y reforma de tu casa" data-en="Civic Points, Questlines, Jobs &amp; 6-Stage House Renovation">Puntos Cívicos, líneas de misiones, trabajos y reforma de tu casa</h4>
+        </div>
+        <p data-es="Haz favores a los vecinos para ganar Puntos Cívicos (P.C.) y transformar el pueblo: evita que derriben el puente del Arroyuelo, reabre los recreativos o desbloquea comercios con Josefa y Don Luis. Compagina las misiones con trabajos de taxi, reparto o jornal y recoge flores de azafrán ocultas."
+           data-en="Help neighbours to earn Civic Points (P.C.) and transform the town: save the Arroyuelo bridge from demolition, reopen the arcade hall or unlock local businesses with Josefa and Don Luis. Take on taxi, delivery or day-labour jobs and hunt for hidden saffron flowers.">
+          Haz favores a los vecinos para ganar Puntos Cívicos (P.C.) y transformar el pueblo: evita que derriben el puente del Arroyuelo, reabre los recreativos o desbloquea comercios con Josefa y Don Luis. Compagina las misiones con trabajos de taxi, reparto o jornal y recoge flores de azafrán ocultas.
+        </p>
+        <ul class="mat-chip-list">
+          <li>Puntos Cívicos (P.C.)</li>
+          <li>Casa en 6 estados (fuera y dentro)</li>
+          <li>Herencia de la Eufrasia (10.000 €)</li>
+          <li>Centralita de móvil y llamadas</li>
+          <li>6 Peñas y grafitis</li>
+          <li>Niños y vecinos con horario</li>
+        </ul>
+      </article>
+
+      <article class="mat-pillar">
+        <div class="mat-pillar-top">
+          <span class="mat-pillar-icon">🕹️</span>
+          <h4 data-es="Galaxy Recress, el Motín del Jamón, Ajedrez Humano y 6 radios" data-en="Galaxy Recress Arcade, Ham Riot, Human Chess &amp; 6 Radio Stations">Galaxy Recress, el Motín del Jamón, Ajedrez Humano y 6 radios</h4>
+        </div>
+        <p data-es="Dentro del pueblo hay juegos enteros: reabre los recreativos Galaxy Recress para competir en el torneo de Tokken 9 (contra DoomAssasin78, más conocido como el alcalde), corre en RALLY 9 con nitro y aftertouch, boxea contra Fonsi en Hit The VIP, juega al Ajedrez Humano o lía el bate los jueves en el Motín del Jamón Asado."
+           data-en="Whole games live inside the town: reopen the Galaxy Recress arcade to enter the Tokken 9 fighting tournament (against DoomAssasin78, aka the Mayor), race in RALLY 9 with nitro and aftertouch, box Fonsi in Hit The VIP, play Human Chess or swing your bat on Thursdays in the Roasted Ham Riot.">
+          Dentro del pueblo hay juegos enteros: reabre los recreativos Galaxy Recress para competir en el torneo de Tokken 9 (contra DoomAssasin78, más conocido como el alcalde), corre en RALLY 9 con nitro y aftertouch, boxea contra Fonsi en Hit The VIP, juega al Ajedrez Humano o lía el bate los jueves en el Motín del Jamón Asado.
+        </p>
+        <ul class="mat-chip-list">
+          <li>Tokken 9 (Lucha arcade)</li>
+          <li>RALLY 9 (Carreras 3 vueltas)</li>
+          <li>Hit The VIP (Boxeo)</li>
+          <li>Motín del Jamón Asado</li>
+          <li>Ajedrez Humano con vista de cine</li>
+          <li>6 Emisoras (Traktor FM, Koka y Ná FM…)</li>
+        </ul>
+      </article>
+
+      <article class="mat-pillar">
+        <div class="mat-pillar-top">
+          <span class="mat-pillar-icon">⚙️</span>
+          <h4 data-es="Ingeniería en Godot 4.7.2: 84+ FPS a 2K, FSR y soporte total de mando" data-en="Godot 4.7.2 Engineering: 84+ FPS at 2K, FSR &amp; Full Controller Support">Ingeniería en Godot 4.7.2: 84+ FPS a 2K, FSR y soporte total de mando</h4>
+        </div>
+        <p data-es="Las casas se funden por zonas y las alturas del suelo van en rejilla en caché para volar incluso en móviles y Steam Machine. Incluye resolución dinámica, escalado FSR 1 / FSR 2, precalentado de shaders mientras echas un tres en raya contra el alcalde en la carga, y detección automática de iconos de teclado, Xbox/Steam, PlayStation y táctil."
+           data-en="Houses merge by zone and ground heights use a cached grid for smooth framerates on PC, Steam Machine and Android. Includes dynamic resolution, FSR 1 / FSR 2 upscaling, shader pre-warming while playing tic-tac-toe against the Mayor on the loading screen, and dynamic input prompts.">
+          Las casas se funden por zonas y las alturas del suelo van en rejilla en caché para volar incluso en móviles y Steam Machine. Incluye resolución dinámica, escalado FSR 1 / FSR 2, precalentado de shaders mientras echas un tres en raya contra el alcalde en la carga, y detección automática de iconos de teclado, Xbox/Steam, PlayStation y táctil.
+        </p>
+        <ul class="mat-chip-list">
+          <li>Casas fundidas por zonas</li>
+          <li>FSR 1 / FSR 2 + Res. Dinámica</li>
+          <li>3 cámaras de coche + Slow-Mo</li>
+          <li>Semáforos con ciclo y colas</li>
+          <li>Teclado · Mando · Táctil</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- SCREENSHOT GALLERY WITH FILTER -->
+    <h3 class="mat-section-title">
+      <span class="num">02</span>
+      <span data-es="Galería de Madridejos (pulsa para ampliar)" data-en="Madridejos Gallery (click to enlarge)">Galería de Madridejos (pulsa para ampliar)</span>
+    </h3>
+
+    <div class="gallery-filters" role="tablist">
+      <button type="button" class="filter-btn active" data-filter="all" data-es="Todas (9)" data-en="All (9)">Todas (9)</button>
+      <button type="button" class="filter-btn" data-filter="pueblo" data-es="El Pueblo y Calles" data-en="Town &amp; Landmarks">El Pueblo y Calles</button>
+      <button type="button" class="filter-btn" data-filter="minijuegos" data-es="Recress y Minijuegos" data-en="Arcade &amp; Minigames">Recress y Minijuegos</button>
+      <button type="button" class="filter-btn" data-filter="vida" data-es="Creador y Conducción" data-en="Creator &amp; Driving">Creador y Conducción</button>
+    </div>
+
+    <div class="mat-gallery" id="matGallery">
+      <div class="shot-card" data-cat="pueblo" data-full="img/matritellus/shots/plaza_ayuntamiento.jpg" data-title="Plaza del Ayuntamiento · Soportales y tableros hechos a mano">
+        <div class="shot-thumb"><img src="img/matritellus/shots/plaza_ayuntamiento.jpg" alt="Plaza del Ayuntamiento" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Plaza del Ayuntamiento" data-en="Town Hall Square">Plaza del Ayuntamiento</strong>
+          <span data-es="Soportales de ladrillo, reloj, escudo y los tableros de ajedrez." data-en="Brick arcades, clock, coat of arms and the human chess boards.">Soportales de ladrillo, reloj, escudo y los tableros de ajedrez.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="pueblo" data-full="img/matritellus/shots/cruce_semaforos.jpg" data-title="El Cruce de los Semáforos · Las 5 esquinas hechas a mano (v0.0.21)">
+        <div class="shot-thumb"><img src="img/matritellus/shots/cruce_semaforos.jpg" alt="Cruce de los Semáforos" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="El Cruce de los Semáforos (v0.0.21)" data-en="The Traffic Light Crossroads (v0.0.21)">El Cruce de los Semáforos (v0.0.21)</strong>
+          <span data-es="Seguros Sopiss, Clínica Dental, Santa Ana 2, mirador y semáforos con ciclo real." data-en="Seguros Sopiss, Dental Clinic, Santa Ana 2, bay window house and working traffic lights.">Seguros Sopiss, Clínica Dental, Santa Ana 2, mirador y semáforos con ciclo real.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="pueblo" data-full="img/matritellus/shots/molino_tio_gerardo.jpg" data-title="Molino del Tío Gerardo · Aspas, tapia encalada y zócalo rojo">
+        <div class="shot-thumb"><img src="img/matritellus/shots/molino_tio_gerardo.jpg" alt="Molino del Tío Gerardo" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Molino del Tío Gerardo" data-en="Uncle Gerardo's Windmill">Molino del Tío Gerardo</strong>
+          <span data-es="Molino manchego hecho a mano con su tapia blanca y zócalo almagre." data-en="Handcrafted Manchego windmill with its whitewashed wall and red plinth.">Molino manchego hecho a mano con su tapia blanca y zócalo almagre.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="minijuegos" data-full="img/matritellus/shots/motin_jamon.jpg" data-title="El Motín del Jamón Asado · Jueves en La Cocina de Henry">
+        <div class="shot-thumb"><img src="img/matritellus/shots/motin_jamon.jpg" alt="El Motín del Jamón Asado" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="El Motín del Jamón Asado" data-en="The Roasted Ham Riot">El Motín del Jamón Asado</strong>
+          <span data-es="«¡Atiza! Los que queden en pie tendrán jamón»: todos contra todos de 60 s." data-en="“Swing away! Those left standing get roasted ham”: 60s all-out street brawl.">«¡Atiza! Los que queden en pie tendrán jamón»: todos contra todos de 60 s.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="minijuegos" data-full="img/matritellus/shots/galaxy_rally9.jpg" data-title="RALLY 9 · Recreativa de conducción en los Galaxy Recress">
+        <div class="shot-thumb"><img src="img/matritellus/shots/galaxy_rally9.jpg" alt="RALLY 9 en Galaxy Recress" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="RALLY 9 (Galaxy Recress)" data-en="RALLY 9 (Galaxy Recress)">RALLY 9 (Galaxy Recress)</strong>
+          <span data-es="El asiento rojo de los recreativos: 3 vueltas contra El Tunero con nitro y derribos." data-en="The red arcade racer seat: 3 laps against El Tunero with nitro and takedowns.">El asiento rojo de los recreativos: 3 vueltas contra El Tunero con nitro y derribos.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="minijuegos" data-full="img/matritellus/shots/galaxy_recress.jpg" data-title="Torneo de Tokken 9 · La final contra DoomAssasin78 (el alcalde)">
+        <div class="shot-thumb"><img src="img/matritellus/shots/galaxy_recress.jpg" alt="Torneo en Galaxy Recress" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Torneo en los Galaxy Recress" data-en="Galaxy Recress Tournament">Torneo en los Galaxy Recress</strong>
+          <span data-es="«¡K.O.! ¡Gana DoomAssasin78! ¡Gana el alcalde!» antes del reto a doble o nada." data-en="“K.O.! DoomAssasin78 wins! The Mayor wins!” right before his double-or-nothing challenge.">«¡K.O.! ¡Gana DoomAssasin78! ¡Gana el alcalde!» antes del reto a doble o nada.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="minijuegos" data-full="img/matritellus/shots/ajedrez_humano.jpg" data-title="Ajedrez Humano · Partida en la Plaza con vecinos y vista de cine">
+        <div class="shot-thumb"><img src="img/matritellus/shots/ajedrez_humano.jpg" alt="Ajedrez Humano" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Ajedrez Humano en la Plaza" data-en="Human Chess in the Square">Ajedrez Humano en la Plaza</strong>
+          <span data-es="Vecinos y perros como piezas vivas sobre el tablero con cámara cinemática." data-en="Neighbours and dogs acting as living chess pieces with a cinematic camera.">Vecinos y perros como piezas vivas sobre el tablero con cámara cinemática.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="vida" data-full="img/matritellus/shots/creador_personaje.jpg" data-title="Creador de personaje · «¿Y tú de quién eres?»">
+        <div class="shot-thumb"><img src="img/matritellus/shots/creador_personaje.jpg" alt="Creador de personaje" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="«¿Y tú de quién eres?» (Creador)" data-en="“And whose kid are you?” (Creator)">«¿Y tú de quién eres?» (Creador)</strong>
+          <span data-es="35 peinados, 9 cejas, 12 barbas, gorras, ropa, calzado y pañuelo de peña." data-en="35 hairstyles, 9 eyebrows, 12 beards, caps, outfits, shoes and festival scarves.">35 peinados, 9 cejas, 12 barbas, gorras, ropa, calzado y pañuelo de peña.</span>
+        </div>
+      </div>
+
+      <div class="shot-card" data-cat="vida" data-full="img/matritellus/shots/conduccion_z15.jpg" data-title="Conducción por Madridejos · La Z15 blanca rumbo a la Cooperativa">
+        <div class="shot-thumb"><img src="img/matritellus/shots/conduccion_z15.jpg" alt="Conducción en la Z15" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Al volante de la Z15" data-en="Behind the Wheel of the Z15">Al volante de la Z15</strong>
+          <span data-es="Cada vehículo con motor y claxon propios, radio en vivo y velocímetro." data-en="Every vehicle features its own engine &amp; horn audio, live radio and speedometer.">Cada vehículo con motor y claxon propios, radio en vivo y velocímetro.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPANDABLE VERSION HISTORY (v0.0.1 - v0.0.21) -->
+    <details class="mat-changelog">
+      <summary>
+        <span data-es="📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)" data-en="📜 Development Log &amp; Published Releases (v0.0.1 → v0.0.21)">📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)</span>
+        <span data-es="Desplegar ▼" data-en="Expand ▼">Desplegar ▼</span>
+      </summary>
+      <div class="mat-changelog-body">
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.21</span><span class="ver-date">22/11/2026</span></div>
+          <p>El cruce de los semáforos: las cinco esquinas hechas a mano (Seguros Sopiss con vendedora, cliente y señora de la limpieza tarareando de noche, Clínica Dental, Santa Ana 2, casa del mirador y beige del Salvador) y semáforos que paran a los coches y parpadean en ámbar de madrugada o si los tiras; calles Tembleque, Delicias, Reina Sofía, Parra, Descanso y Pastora.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.20</span><span class="ver-date">21/11/2026</span></div>
+          <p>Almazara González de la Ruz, Pollos Asados Javi (con interior y repartos martes y domingos), Cafetería Rize y su callejón, Travesía del Clavel peatonal y elevada, Marciano y sus batallitas de los 80, azafrán que gira con halo.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.19</span><span class="ver-date">21/11/2026</span></div>
+          <p>Misiones de fondo: la herencia de la Eufrasia (10.000 € a Hacienda a plazos en el cajero) y las obras de la casa en 6 estados por fuera y por dentro con Edmundo Monedero; trabajos de reparto, taxi y jornal; interior del Banco Cantabria, Silo del Tío Anaranjao y Parque del Paseo del Cristo.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.18</span><span class="ver-date">20/11/2026</span></div>
+          <p>Boxeo de Fonsi rehecho, golpe cargado en la riña del jamón, recreativas RALLY 9 y Hit The VIP en los Galaxy Recress, tres cámaras de coche y cámara lenta en los saltos, taller que repinta, mochila estilo Animal Crossing, Tomasa Malvora e interior de los chinos del Arroyuelo.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.16 – v0.0.17</span><span class="ver-date">17/11/2026</span></div>
+          <p>Casas fundidas por zonas (de 10 a 53 FPS en la peor dirección), Feliciano y su jamón de los jueves, armas nuevas en la riña, ermitas de San Sebastián y San Cristóbal, rondas de vecinos con nombre, ruta del colesterol y colores en los diálogos.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.11 – v0.0.15</span><span class="ver-date">16–17/11/2026</span></div>
+          <p>Creador de personaje nuevo y tu casa, Padrón Municipal, tres en raya contra el alcalde en la pantalla de carga, Cartas desde Correa, Recinto Ferial con Auditorio, Merkocarry, Pizzería Toti, IES Valdeacero, MasAhorro, teclado en mando/móvil/Steam.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.6 – v0.0.10</span><span class="ver-date">15–16/11/2026</span></div>
+          <p>Ajedrez humano, máquina de bolas con Colección en la Agenda, Plaza del Ayuntamiento, Molino del Tío Gerardo, Antigua Plaza de Toros, Puente del Arroyuelo Medio, Convento de Santa Ana, Ermita de la Caridad, Mercamona, Tele Dürum, cuartel de los Tricornios y Papelería Rocas.</p>
+        </div>
+        <div class="ver-row">
+          <div class="ver-head"><span class="ver-tag">v0.0.1 – v0.0.5</span><span class="ver-date">13–14/11/2026</span></div>
+          <p>Primera versión con instaladores para Windows, Android y Linux; grafitis de las seis peñas; Galaxy Recress y Tokken 9; centralita de llamadas; Convento de San Francisco («Iglesia del Pretil»); Toro de Osborne en la A-4; sexta emisora Koka y Ná FM, FSR y resolución dinámica.</p>
+        </div>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ==================== WORLD 2: DATAMORFOS ==================== -->
+<section id="datamorfos" class="world-datamorfos">
+  <canvas id="dm-bg-canvas" aria-hidden="true"></canvas>
+
+  <div class="dm-container">
+    <header class="dm-header">
+      <div class="subsidiary-pill">
+        <span>⚡</span>
+        <span data-es="JUEGO 02 · BULLET HEAVEN 2.5D CON CRIATURAS EVOLUTIVAS · v0.4.6c" data-en="GAME 02 · 2.5D BULLET HEAVEN WITH EVOLVING CREATURES · v0.4.6c">JUEGO 02 · BULLET HEAVEN 2.5D CON CRIATURAS EVOLUTIVAS · v0.4.6c</span>
+      </div>
+      <img class="dm-logo-img" src="img/datamorfos/logo.png" alt="DATAMORFOS">
+      <img class="dm-sub-img" id="dmSubImg" src="img/datamorfos/subtitulo.png" alt="Supervivientes del Reino Digital">
+      <p class="dm-lead" data-es="Sobrevive 15 minutos a oleadas masivas de malware en un mundo digital 2.5D con filtro CRT. Empieza como un pequeño Byteformo y evoluciona cuatro veces en plena partida hasta alcanzar tu forma Teraformo Definitiva, combinando ataques en sinergias ◆ COMBO, superando Altares de Hardware y desafiando a Ezra Kernel IV."
+         data-en="Survive 15 minutes against massive malware hordes in a 2.5D digital world with CRT scanlines. Start as a tiny Byteform and evolve four times mid-run into your Ultimate Teraform stage, forging ◆ COMBO attack synergies, clearing Hardware Altars and challenging Ezra Kernel IV.">
+        Sobrevive 15 minutos a oleadas masivas de malware en un mundo digital 2.5D con filtro CRT. Empieza como un pequeño Byteformo y evoluciona cuatro veces en plena partida hasta alcanzar tu forma Teraformo Definitiva, combinando ataques en sinergias ◆ COMBO, superando Altares de Hardware y desafiando a Ezra Kernel IV.
+      </p>
+    </header>
+
+    <div class="dm-stats-bar">
+      <div class="dm-stat-box">
+        <strong>6 × 5 = 30</strong>
+        <span data-es="Criaturas jugables (5 etapas)" data-en="Playable creatures (5 stages)">Criaturas jugables (5 etapas)</span>
+      </div>
+      <div class="dm-stat-box">
+        <strong>31 + 24</strong>
+        <span data-es="Ataques, evoluciones y firmas" data-en="Attacks, evolutions &amp; signatures">Ataques, evoluciones y firmas</span>
+      </div>
+      <div class="dm-stat-box">
+        <strong>5 Mapas</strong>
+        <span data-es="Reinos 2.5D + Modo Corrupto" data-en="2.5D Realms + Corrupted Mode">Reinos 2.5D + Modo Corrupto</span>
+      </div>
+      <div class="dm-stat-box">
+        <strong>100 % Synth</strong>
+        <span data-es="BSO a 3 capas y SFX por código" data-en="3-layer OST &amp; code-synthesized SFX">BSO a 3 capas y SFX por código</span>
+      </div>
+    </div>
+
+    <!-- ==================== INTERACTIVE WEB DATADEX ==================== -->
+    <div id="datadex" class="datadex-shell">
+      <div class="datadex-top">
+        <div class="datadex-title">
+          <img class="pixel" src="img/datamorfos/ui/nucleomorfo.png" alt="" width="32" height="32">
+          <h3 data-es="DATADEX INTERACTIVA · LAS 6 LÍNEAS EVOLUTIVAS" data-en="INTERACTIVE DATADEX · THE 6 EVOLUTION LINES">DATADEX INTERACTIVA · LAS 6 LÍNEAS EVOLUTIVAS</h3>
+        </div>
+        <span class="datadex-hint" data-es="Elige una línea y pulsa en cualquiera de sus 5 etapas para evolucionar la criatura" data-en="Select a line and click any of its 5 stages to evolve the creature">Elige una línea y pulsa en cualquiera de sus 5 etapas para evolucionar la criatura</span>
+      </div>
+
+      <!-- 6 Line Tabs -->
+      <div class="dex-lines-tabs" id="dexLineTabs" role="tablist"></div>
+
+      <!-- Active Creature Inspector -->
+      <div class="dex-main-grid">
+        <div class="dex-stage-pedestal">
+          <span class="dex-stage-badge" id="dexStageLabel">ETAPA 1/5 · BYTEFORMO</span>
+          <span class="dex-level-badge" id="dexLevelLabel">NV 1</span>
+          <img class="dex-big-sprite" id="dexBigSprite" src="img/datamorfos/criaturas/brasa_0.png" alt="Brasín">
+          <div class="dex-pedestal-ring" aria-hidden="true"></div>
+        </div>
+
+        <div class="dex-info-panel">
+          <div>
+            <div class="dex-creature-header">
+              <h4 id="dexCreatureName">Brasín</h4>
+              <span class="dex-elem-pill" id="dexElemPill">🔥 Línea Brasa · Fuego</span>
+            </div>
+          </div>
+
+          <div class="dex-lore-box" id="dexLoreText">
+            «Nació en un servidor abandonado, entre logs que nadie volvió a leer. Escupe chispas para no oír el silencio. Aún cree que alguien vendrá a buscarlo.»
+          </div>
+
+          <div class="dex-specs-grid">
+            <div class="dex-spec">
+              <span class="lbl" data-es="VENTAJA PASIVA DE LÍNEA" data-en="LINE PASSIVE BONUS">VENTAJA PASIVA DE LÍNEA</span>
+              <strong id="dexPassiveText">+3 % de daño por evolución (hasta +15 %)</strong>
+            </div>
+            <div class="dex-spec">
+              <span class="lbl" data-es="ATAQUE DE FIRMA / INICIAL" data-en="SIGNATURE / STARTER ATTACK">ATAQUE DE FIRMA / INICIAL</span>
+              <strong id="dexSignatureText">Bola de Fuego (Ataque inicial)</strong>
+            </div>
+          </div>
+
+          <!-- 5 Evolution Stages Strip -->
+          <div class="dex-evo-strip" id="dexEvoStrip"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== THE 5 DIGITAL REALMS ==================== -->
+    <h3 class="dm-section-title">
+      <span class="num">01</span>
+      <span data-es="Los 5 Reinos del Mundo Digital" data-en="The 5 Realms of the Digital World">Los 5 Reinos del Mundo Digital</span>
+    </h3>
+
+    <div class="dm-maps-grid">
+      <article class="dm-map-card" style="--map-col:#66f0ff">
+        <span class="dm-map-num">MAPA 01 · INICIO</span>
+        <h4 data-es="Mar Digital" data-en="Digital Sea">Mar Digital</h4>
+        <p data-es="El océano de datos donde empezó todo. Rejilla de circuitos, virus clásicos, mareas que obligan a buscar islas seguras y los siete jefes de la red."
+           data-en="The data ocean where it all began. Circuit grids, classic malware, rising tides that force you onto safe islands, and the seven network bosses.">
+          El océano de datos donde empezó todo. Rejilla de circuitos, virus clásicos, mareas que obligan a buscar islas seguras y los siete jefes de la red.
+        </p>
+        <div class="dm-map-boss" data-es="👑 Jefe Final: Rey Virus Omega" data-en="👑 Final Boss: King Virus Omega">👑 Jefe Final: Rey Virus Omega</div>
+      </article>
+
+      <article class="dm-map-card" style="--map-col:#ffb859">
+        <span class="dm-map-num">MAPA 02 · CORTAFUEGOS</span>
+        <h4 data-es="Desierto Firewall" data-en="Firewall Desert">Desierto Firewall</h4>
+        <p data-es="Arena, circuitos ardientes y pirámides con colisión 2.5D. Las Tormentas Binarias cambian el viento, la Esfinge exige resolver su CAPTCHA y los muros de fuego cruzan la pantalla."
+           data-en="Sand, burning circuits and 2.5D pyramids. Binary Storms shift the wind, the Sphinx demands solving its CAPTCHA, and walls of fire sweep across the screen.">
+          Arena, circuitos ardientes y pirámides con colisión 2.5D. Las Tormentas Binarias cambian el viento, la Esfinge exige resolver su CAPTCHA y los muros de fuego cruzan la pantalla.
+        </p>
+        <div class="dm-map-boss" data-es="🧱 Jefe Final: Ignimuralla" data-en="🧱 Final Boss: Igniwall">🧱 Jefe Final: Ignimuralla</div>
+      </article>
+
+      <article class="dm-map-card" style="--map-col:#7ef9e0">
+        <span class="dm-map-num">MAPA 03 · PERMAFROST</span>
+        <h4 data-es="Estado Congelado" data-en="Frozen State">Estado Congelado</h4>
+        <p data-es="Hielo que refleja los sprites bajo tus pies, ventisca continua, charcos de refrigerante de Refri Liquid y avalanchas de rocas de nieve con huecos para esquivar con dash."
+           data-en="Ice that reflects sprites beneath your feet, relentless blizzards, Refri Liquid coolant puddles and snow-boulder avalanches with gaps to dash through.">
+          Hielo que refleja los sprites bajo tus pies, ventisca continua, charcos de refrigerante de Refri Liquid y avalanchas de rocas de nieve con huecos para esquivar con dash.
+        </p>
+        <div class="dm-map-boss" data-es="❄️ Jefe Final: Hibernón" data-en="❄️ Final Boss: Hibernon">❄️ Jefe Final: Hibernón</div>
+      </article>
+
+      <article class="dm-map-card" style="--map-col:#ff6448">
+        <span class="dm-map-num">MAPA 04 · FORJA</span>
+        <h4 data-es="Vulkano Apostólica" data-en="Apostolic Vulkano">Vulkano Apostólica</h4>
+        <p data-es="Volcanes que humean en reposo, cráteres de impacto y lluvia de rocas incandescentes. Completar una partida aquí desbloquea la línea rítmica de Modemín."
+           data-en="Smoking volcanoes, impact craters and falling molten rocks. Completing a run here unlocks Modemín's rhythm-based evolution line.">
+          Volcanes que humean en reposo, cráteres de impacto y lluvia de rocas incandescentes. Completar una partida aquí desbloquea la línea rítmica de Modemín.
+        </p>
+        <div class="dm-map-boss" data-es="🔥 Jefe Final: Kerberos" data-en="🔥 Final Boss: Kerberos">🔥 Jefe Final: Kerberos</div>
+      </article>
+
+      <article class="dm-map-card" style="--map-col:#ff5ce6">
+        <span class="dm-map-num">MAPA 05 · CATEDRAL</span>
+        <h4 data-es="Núcleo Kernel" data-en="Kernel Core">Núcleo Kernel</h4>
+        <p data-es="El cibercastillo del corazón del sistema en 2.5D con muralla al fondo. Aquí no hay oleadas normales: solo truenos sincronizados con la música y un duelo épico en 4 fases."
+           data-en="The 2.5D cyber-castle at the heart of the system. No standard waves here: only lightning synced to the music and an epic 4-phase boss showdown.">
+          El cibercastillo del corazón del sistema en 2.5D con muralla al fondo. Aquí no hay oleadas normales: solo truenos sincronizados con la música y un duelo épico en 4 fases.
+        </p>
+        <div class="dm-map-boss" data-es="👁️ Jefe Final: EZRA KERNEL IV" data-en="👁️ Final Boss: EZRA KERNEL IV">👁️ Jefe Final: EZRA KERNEL IV</div>
+      </article>
+    </div>
+
+    <!-- ==================== DATAMORFOS 4 CORE SYSTEMS ==================== -->
+    <h3 class="dm-section-title">
+      <span class="num">02</span>
+      <span data-es="Sistemas de Combate y Progresión" data-en="Combat &amp; Progression Systems">Sistemas de Combate y Progresión</span>
+    </h3>
+
+    <div class="dm-bento">
+      <article class="dm-pillar">
+        <h4 data-es="◆ Evolución en 5 etapas, Ataques de Firma y Sinergias COMBO" data-en="◆ 5-Stage Evolution, Signature Attacks &amp; COMBO Synergies">◆ Evolución en 5 etapas, Ataques de Firma y Sinergias COMBO</h4>
+        <p data-es="En los niveles 5, 20, 35 y 50 tu criatura evoluciona con una onda expansiva, desbloqueando nuevos huecos de equipo (de 2+2 en Byteformo hasta 6+6 en Teraformo), hasta 2 cargas de Dash invulnerable y un Ataque de Firma innato que no ocupa hueco. Combina un ataque a nivel 8 con su pasiva asociada (o las nuevas evoluciones como Bofetón Ofimático, Tormenta de Banda Ancha y Handshake 56k) para forjar armas devastadoras."
+           data-en="At levels 5, 20, 35 and 50 your creature evolves with a shockwave, unlocking new equipment slots (from 2+2 in Byteform up to 6+6 in Teraform), up to 2 invulnerable Dash charges and an innate Signature Attack. Pair a level-8 attack with its matching passive to forge devastating evolved weapons.">
+          En los niveles 5, 20, 35 y 50 tu criatura evoluciona con una onda expansiva, desbloqueando nuevos huecos de equipo (de 2+2 en Byteformo hasta 6+6 en Teraformo), hasta 2 cargas de Dash invulnerable y un Ataque de Firma innato que no ocupa hueco. Combina un ataque a nivel 8 con su pasiva asociada (o las nuevas evoluciones como Bofetón Ofimático, Tormenta de Banda Ancha y Handshake 56k) para forjar armas devastadoras.
+        </p>
+      </article>
+
+      <article class="dm-pillar">
+        <h4 data-es="⛩️ Altares de Hardware, Clickbaits y Jefes con Fases" data-en="⛩️ Hardware Altars, Clickbaits &amp; Multi-Phase Bosses">⛩️ Altares de Hardware, Clickbaits y Jefes con Fases</h4>
+        <p data-es="Cada 3 minutos aparece un Altar de Mejoras de Hardware: mantente 5 s en su círculo para activarlo y supera su prueba (eliminar 40 virus en la zona, resistir 20 s a las arañas o abatir élites) para elegir una bendición permanente. Caza al escurridizo Clickbait antes de que huya y esquiva los 17 patrones telegrafiados de los jefes cuando se enfurecen por debajo del 50 % de vida."
+           data-en="Every 3 minutes a Hardware Upgrade Altar spawns: stay inside its ring for 5s to trigger a trial (slay 40 viruses inside the circle, survive a 20s spider swarm or defeat elites) for a permanent stat blessing. Hunt the elusive Clickbait and dodge 17 telegraphed boss patterns.">
+          Cada 3 minutos aparece un Altar de Mejoras de Hardware: mantente 5 s en su círculo para activarlo y supera su prueba (eliminar 40 virus en la zona, resistir 20 s a las arañas o abatir élites) para elegir una bendición permanente. Caza al escurridizo Clickbait antes de que huya y esquiva los 17 patrones telegrafiados de los jefes cuando se enfurecen por debajo del 50 % de vida.
+        </p>
+      </article>
+
+      <article class="dm-pillar">
+        <h4 data-es="🧬 Laboratorio, Desfragmentación y Árbol de Nucleomorfos" data-en="🧬 Lab, Defragmentation &amp; Nucleomorph Skill Tree">🧬 Laboratorio, Desfragmentación y Árbol de Nucleomorfos</h4>
+        <p data-es="Invierte los Bits ganados en 12 mejoras permanentes del Laboratorio (Potencia, Vitalidad, Blindaje, Agilidad, Fortuna, Punto de Restauración…) con reembolso gratuito en cualquier momento. Al completar el Laboratorio, lanza la Desfragmentación de Núcleos para obtener Nucleomorfos, activar nodos del Árbol de Prestigio (Cuarentena, Vuelve a nacer, Arranque en caliente) y desbloquear el modo Corrupto."
+           data-en="Spend earned Bits on 12 permanent Lab upgrades with free respec anytime. Once the Lab is complete, run Core Defragmentation to earn Nucleomorphs, unlock Prestige Tree nodes (Quarantine shield, Reborn, Hot Boot) and take on Corrupted difficulty.">
+          Invierte los Bits ganados en 12 mejoras permanentes del Laboratorio (Potencia, Vitalidad, Blindaje, Agilidad, Fortuna, Punto de Restauración…) con reembolso gratuito en cualquier momento. Al completar el Laboratorio, lanza la Desfragmentación de Núcleos para obtener Nucleomorfos, activar nodos del Árbol de Prestigio (Cuarentena, Vuelve a nacer, Arranque en caliente) y desbloquear el modo Corrupto.
+        </p>
+      </article>
+
+      <article class="dm-pillar">
+        <h4 data-es="🎵 BSO Dinámica a 3 Capas y Modemín «A Tempo»" data-en="🎵 3-Layer Dynamic Soundtrack &amp; “A Tempo” Modemín">🎵 BSO Dinámica a 3 Capas y Modemín «A Tempo»</h4>
+        <p data-es="La música original de JS Bach transiciona en tiempo real entre tres capas sincronizadas (Calma, Acción y Jefe), más temas dedicados para cada fase del Núcleo Kernel, y todos los efectos de sonido están sintetizados matemáticamente por código en Python (NumPy/SciPy) sin usar muestras de terceros. Con Modemín, tus ataques disparan exactamente en el pulso de la canción."
+           data-en="JS Bach's original soundtrack transitions seamlessly across three synced layers (Calm, Action and Boss), plus dedicated themes for every phase of Kernel Core, while all SFX are mathematically synthesized via Python code without third-party samples. With Modemín, your attacks fire on the exact musical beat.">
+          La música original de JS Bach transiciona en tiempo real entre tres capas sincronizadas (Calma, Acción y Jefe), más temas dedicados para cada fase del Núcleo Kernel, y todos los efectos de sonido están sintetizados matemáticamente por código en Python (NumPy/SciPy) sin usar muestras de terceros. Con Modemín, tus ataques disparan exactamente en el pulso de la canción.
+        </p>
+      </article>
+    </div>
+
+    <!-- ==================== DATAMORFOS SCREENSHOT GALLERY ==================== -->
+    <h3 class="dm-section-title">
+      <span class="num">03</span>
+      <span data-es="Galería del Reino Digital (pulsa para ampliar)" data-en="Digital Realm Gallery (click to enlarge)">Galería del Reino Digital (pulsa para ampliar)</span>
+    </h3>
+
+    <div class="dm-gallery">
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/rey_virus_omega.jpg" data-title="DATAMORFOS · Duelo contra el Rey Virus Omega y su horda">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/rey_virus_omega.jpg" alt="Rey Virus Omega" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="¡Alerta: Rey Virus Omega!" data-en="Alert: King Virus Omega!">¡Alerta: Rey Virus Omega!</strong>
+          <span data-es="Haces giratorios telegrafiados y cientos de virus en pantalla en el Mar Digital." data-en="Telegraphed rotating beams and hundreds of viruses on screen in the Digital Sea.">Haces giratorios telegrafiados y cientos de virus en pantalla en el Mar Digital.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/evolucion_solardrakon.jpg" data-title="Evolución a etapa Definitiva · ¡Solardrakón! (Supernova Solar)">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/evolucion_solardrakon.jpg" alt="Evolución a Solardrakón" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Evolución Definitiva: ¡Solardrakón!" data-en="Ultimate Evolution: Solardrakón!">Evolución Definitiva: ¡Solardrakón!</strong>
+          <span data-es="Al alcanzar el nivel 50 desbloqueas la 5.ª forma y su firma Supernova Solar." data-en="Reaching level 50 unlocks the 5th form and its Solar Supernova signature attack.">Al alcanzar el nivel 50 desbloqueas la 5.ª forma y su firma Supernova Solar.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/jefe_quimera.jpg" data-title="Jefe Quimera Malware · Ataques en sector y armas evolucionadas">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/jefe_quimera.jpg" alt="Jefe Quimera Malware" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Combate contra Quimera Malware" data-en="Clash Against Malware Chimera">Combate contra Quimera Malware</strong>
+          <span data-es="Magmadrako en etapa Perfecto con 5 armas y pasivas combinadas al minuto 10." data-en="Magmadrako in Perfect stage wielding 5 combined weapons and passives at minute 10.">Magmadrako en etapa Perfecto con 5 armas y pasivas combinadas al minuto 10.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/desierto_tormenta.jpg" data-title="Desierto Firewall · ¡Tormenta Binaria! con Pirodraco">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/desierto_tormenta.jpg" alt="Tormenta Binaria en el Desierto Firewall" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Desierto Firewall: ¡Tormenta Binaria!" data-en="Firewall Desert: Binary Storm!">Desierto Firewall: ¡Tormenta Binaria!</strong>
+          <span data-es="El viento empuja en mitad del combate mientras esquivas con el botón de Dash." data-en="Desert winds push across the battlefield as you dodge using the Dash charge.">El viento empuja en mitad del combate mientras esquivas con el botón de Dash.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/evoluciones_pixel.png" data-title="Arte original de Pixel · Evoluciones de Brasín y Lomorsin">
+        <div class="shot-thumb"><img class="pixel" src="img/datamorfos/shots/evoluciones_pixel.png" alt="Evoluciones en pixel art" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Pixel Art 100 % Original" data-en="100% Original Pixel Art">Pixel Art 100 % Original</strong>
+          <span data-es="Progresión visual completa desde la etapa Byteformo hasta Teraformo." data-en="Complete visual progression from Byteform stage all the way to Teraform.">Progresión visual completa desde la etapa Byteformo hasta Teraformo.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/partida_hud.jpg" data-title="HUD y Controles · Huecos por etapa, ataque de Firma y botón Dash">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/partida_hud.jpg" alt="Partida de Datamorfos" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="HUD Claro en PC, Deck y Móvil" data-en="Clean HUD on PC, Deck &amp; Mobile">HUD Claro en PC, Deck y Móvil</strong>
+          <span data-es="Escalable de 50 % a 150 %, con soporte completo de teclado, mando y pantalla táctil." data-en="Scalable from 50% to 150%, with full keyboard, controller and touch support.">Escalable de 50 % a 150 %, con soporte completo de teclado, mando y pantalla táctil.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/laboratorio.jpg" data-title="Laboratorio de Mejoras Permanentes · 12 atributos y Desfragmentación">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/laboratorio.jpg" alt="Laboratorio de mejoras" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Laboratorio de Bits" data-en="Bit Upgrade Lab">Laboratorio de Bits</strong>
+          <span data-es="12 mejoras permanentes con reembolso libre y barra de Desfragmentación." data-en="12 permanent upgrades with free respec and Core Defragmentation meter.">12 mejoras permanentes con reembolso libre y barra de Desfragmentación.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/arbol_nucleomorfos.jpg" data-title="Árbol de Nucleomorfos · Progresión de prestigio">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/arbol_nucleomorfos.jpg" alt="Árbol de Nucleomorfos" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Árbol de Nucleomorfos" data-en="Nucleomorph Prestige Tree">Árbol de Nucleomorfos</strong>
+          <span data-es="Ventajas de prestigio como Minería profunda, Rangos de fábrica y Cuarentena." data-en="Prestige perks including Deep Mining, Factory Ranks and Quarantine shield.">Ventajas de prestigio como Minería profunda, Rangos de fábrica y Cuarentena.</span>
+        </div>
+      </div>
+
+      <div class="dm-shot-card" data-full="img/datamorfos/shots/datadex.jpg" data-title="Datadex en el juego · Registro de Criaturas, Virus, Sinergias y Estadísticas">
+        <div class="shot-thumb"><img src="img/datamorfos/shots/datadex.jpg" alt="Datadex en el juego" loading="lazy"></div>
+        <div class="shot-cap">
+          <strong data-es="Datadex y Estadísticas" data-en="In-Game Datadex &amp; Stats">Datadex y Estadísticas</strong>
+          <span data-es="Enciclopedia con Resumen de 20 estadísticas, Criaturas, Virus y tabla de Sinergias." data-en="In-game encyclopedia with 20 lifetime stats, Creatures, Viruses and Synergies.">Enciclopedia con Resumen de 20 estadísticas, Criaturas, Virus y tabla de Sinergias.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATAMORFOS CREDITS & TEAM -->
+    <div class="dm-credits-bar">
+      <div class="dm-team-list">
+        <div class="dm-team-member">
+          <span data-es="DIRECCIÓN Y DISEÑO" data-en="DIRECTION &amp; DESIGN">DIRECCIÓN Y DISEÑO</span>
+          <strong>María Jesús Íñigo Fernández</strong>
+        </div>
+        <div class="dm-team-member">
+          <span data-es="ARTE PIXEL" data-en="PIXEL ART">ARTE PIXEL</span>
+          <strong>Pixel</strong>
+        </div>
+        <div class="dm-team-member">
+          <span data-es="MÚSICA Y SÍNTESIS SFX" data-en="MUSIC &amp; SFX SYNTHESIS">MÚSICA Y SÍNTESIS SFX</span>
+          <strong>JS Bach</strong>
+        </div>
+        <div class="dm-team-member">
+          <span data-es="PROGRAMACIÓN" data-en="PROGRAMMING">PROGRAMACIÓN</span>
+          <strong>Jugón</strong>
+        </div>
+      </div>
+      <div>
+        <span class="spot-version" data-es="RUMBO A STEAM · WINDOWS / LINUX / ANDROID" data-en="COMING TO STEAM · WINDOWS / LINUX / ANDROID">RUMBO A STEAM · WINDOWS / LINUX / ANDROID</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== STUDIO PHILOSOPHY & LOMOXSOFT CONNECTION ==================== -->
+<section id="estudio" class="studio-about">
+  <div class="about-card">
+    <h3 data-es="Sobre LomoXGames" data-en="About LomoXGames">Sobre LomoXGames</h3>
+    <p data-es="LomoXGames nace como el sello de videojuegos originales de LomoXSoft. Construimos juegos con personalidad propia sobre Godot Engine 4.7.2: desde la reconstrucción costumbrista y artesanal de un pueblo manchego entero en 3D (Matritellus) hasta la acción arcade pura en pixel art con música y efectos sintetizados por código (Datamorfos)."
+       data-en="LomoXGames is the original video game label of LomoXSoft. We craft games with distinct identity on Godot Engine 4.7.2: from the artisanal 3D reconstruction of an entire Manchego town (Matritellus) to pure pixel-art arcade action powered by code-synthesized music and sound (Datamorfos).">
+      LomoXGames nace como el sello de videojuegos originales de LomoXSoft. Construimos juegos con personalidad propia sobre Godot Engine 4.7.2: desde la reconstrucción costumbrista y artesanal de un pueblo manchego entero en 3D (Matritellus) hasta la acción arcade pura en pixel art con música y efectos sintetizados por código (Datamorfos).
+    </p>
+    <p data-es="Nuestros juegos se prueban con baterías automatizadas en cada versión y se empaquetan directamente para Windows, Linux (PC, Steam Deck y Steam Machine) y Android, sin telemetría ni micropagos."
+       data-en="Our games are verified with automated test suites on every release and packaged natively for Windows, Linux (PC, Steam Deck and Steam Machine) and Android—with zero telemetry or microtransactions.">
+      Nuestros juegos se prueban con baterías automatizadas en cada versión y se empaquetan directamente para Windows, Linux (PC, Steam Deck y Steam Machine) y Android, sin telemetría ni micropagos.
+    </p>
+  </div>
+
+  <div class="about-card">
+    <h3 data-es="Ecosistema LomoXSoft" data-en="LomoXSoft Ecosystem">Ecosistema LomoXSoft</h3>
+    <p data-es="Además de nuestros videojuegos originales, en la página matriz de LomoXSoft encontrarás nuestras herramientas de software libre (ContFactu, ClaustrApp) y nuestros proyectos de recompilación estática de consolas clásicas a PC nativo."
+       data-en="Alongside our original games, visit the LomoXSoft parent site for our free &amp; open-source software tools (ContFactu, ClaustrApp) and static console recompilation projects.">
+      Además de nuestros videojuegos originales, en la página matriz de LomoXSoft encontrarás nuestras herramientas de software libre (ContFactu, ClaustrApp) y nuestros proyectos de recompilación estática de consolas clásicas a PC nativo.
+    </p>
+    <div class="spot-actions">
+      <a class="btn" href="../index.html" data-es="◀ Ir a LomoXSoft" data-en="◀ Visit LomoXSoft">◀ Ir a LomoXSoft</a>
+      <a class="btn alt" href="https://github.com/LomoXSoft" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn alt" href="https://ko-fi.com/lomoxsoft" target="_blank" rel="noopener">☕ Ko-fi</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="foot-logo" src="img/brand/lomo_games.png" alt="LomoXGames">
+  <p data-es="© 2026 LomoXGames · División de Videojuegos de LomoXSoft · Hecho con Godot Engine 4.7.2" data-en="© 2026 LomoXGames · Video Game Division of LomoXSoft · Built with Godot Engine 4.7.2">
+    © 2026 LomoXGames · División de Videojuegos de LomoXSoft · Hecho con Godot Engine 4.7.2
+  </p>
+  <p>
+    <a href="../index.html">lomoxsoft.github.io</a> ·
+    <a href="https://github.com/LomoXSoft">github.com/LomoXSoft</a>
+  </p>
+</footer>
+
+<!-- ==================== LIGHTBOX MODAL ==================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
+  <div class="lightbox-in">
+    <div class="lightbox-top">
+      <strong id="lightboxTitle">Captura</strong>
+      <button type="button" class="lightbox-close" id="lightboxClose">✕ ESC</button>
+    </div>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- ==================== INTERACTIVE SCRIPTS ==================== -->
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 1. STUDIO INTRO VIDEO PLAYER ---------- */
+  var playIntroBtn = document.getElementById("playIntroBtn");
+  var logoStage = document.getElementById("logoStage");
+  var introWrap = document.getElementById("introWrap");
+  var introVideo = document.getElementById("introVideo");
+
+  function stopIntro() {
+    if (!introVideo) return;
+    introVideo.pause();
+    introVideo.currentTime = 0;
+    introWrap.classList.remove("active");
+    logoStage.classList.remove("playing");
+  }
+
+  if (playIntroBtn && introVideo) {
+    playIntroBtn.addEventListener("click", function () {
+      if (logoStage.classList.contains("playing")) {
+        stopIntro();
+        return;
+      }
+      logoStage.classList.add("playing");
+      introWrap.classList.add("active");
+      introVideo.currentTime = 0;
+      introVideo.play().catch(function () { stopIntro(); });
+    });
+    introVideo.addEventListener("ended", stopIntro);
+    introVideo.addEventListener("click", stopIntro);
+  }
+
+  /* ---------- 2. MATRITELLUS GALLERY FILTER ---------- */
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var matShots = document.querySelectorAll("#matGallery .shot-card");
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cat = btn.getAttribute("data-filter");
+      filterBtns.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      matShots.forEach(function (card) {
+        if (cat === "all" || card.getAttribute("data-cat") === cat) {
+          card.classList.remove("hidden-shot");
+        } else {
+          card.classList.add("hidden-shot");
+        }
+      });
+    });
+  });
+
+  /* ---------- 3. LIGHTBOX FOR ALL SCREENSHOTS ---------- */
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxTitle = document.getElementById("lightboxTitle");
+  var lightboxClose = document.getElementById("lightboxClose");
+
+  document.querySelectorAll("[data-full]").forEach(function (card) {
+    card.addEventListener("click", function () {
+      var src = card.getAttribute("data-full");
+      var title = card.getAttribute("data-title") || "";
+      lightboxImg.src = src;
+      lightboxImg.alt = title;
+      lightboxTitle.textContent = title;
+      lightbox.classList.add("open");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    lightboxImg.src = "";
+  }
+  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLightbox();
+  });
+
+  /* ---------- 4. DATADEX DATA (ALL 6 LINES x 5 STAGES = 30 CREATURES) ---------- */
+  var STAGE_NAMES_ES = ["1/5 · Byteformo (Bebé)", "2/5 · Kiloformo (Novato)", "3/5 · Megaformo (Campeón)", "4/5 · Gigaformo (Perfecto)", "5/5 · Teraformo (Definitivo)"];
+  var STAGE_NAMES_EN = ["1/5 · Byteform (Baby)", "2/5 · Kiloform (Rookie)", "3/5 · Megaform (Champion)", "4/5 · Gigaform (Perfect)", "5/5 · Teraform (Ultimate)"];
+  var STAGE_LEVELS = ["NV 1", "NV 5", "NV 20", "NV 35", "NV 50"];
+
+  var LINES = [
+    {
+      id: "brasa",
+      color: "#ff7a2f",
+      name_es: "Línea Brasa",
+      name_en: "Ember Line",
+      elem_es: "🔥 Fuego",
+      elem_en: "🔥 Fire",
+      passive_es: "+3 % de daño por evolución (hasta +15 %)",
+      passive_en: "+3% all damage per evolution stage (up to +15%)",
+      stages: [
+        {
+          name: "Brasín",
+          img: "img/datamorfos/criaturas/brasa_0.png",
+          sig_es: "Bola de Fuego (Ataque inicial)",
+          sig_en: "Fireball (Starter attack)",
+          lore_es: "Nació en un servidor abandonado, entre logs que nadie volvió a leer. Escupe chispas para no oír el silencio. Aún cree que alguien vendrá a buscarlo.",
+          lore_en: "Born in an abandoned server among logs nobody ever read again. Spits sparks just to drown out the silence. Still believes someone will come looking for him."
+        },
+        {
+          name: "Ascuardo",
+          img: "img/datamorfos/criaturas/brasa_1.png",
+          sig_es: "Firma: Anillo de Brasas (+1 carga de Dash)",
+          sig_en: "Signature: Ember Ring (+1 Dash charge)",
+          lore_es: "Aprendió a pavonearse viendo a los virus que se comían a los débiles. Su cinturón es un trofeo: no pregunta de quién era.",
+          lore_en: "Learned to swagger by watching viruses devour the weak. His belt is a trophy—he doesn't ask who it belonged to."
+        },
+        {
+          name: "Pirodraco",
+          img: "img/datamorfos/criaturas/brasa_2.png",
+          sig_es: "Firma: Meteoro Ígneo",
+          sig_en: "Signature: Igneous Meteor",
+          lore_es: "Vende su fuego al mejor postor y quema lo que le señalen. Su sonrisa torcida es lo último que ven los procesos que no pagan.",
+          lore_en: "Sells his fire to the highest bidder and burns whatever is pointed at. His crooked grin is the last thing non-paying processes see."
+        },
+        {
+          name: "Magmadrako",
+          img: "img/datamorfos/criaturas/brasa_3.png",
+          sig_es: "Firma: Lluvia de Magma",
+          sig_en: "Signature: Magma Rain",
+          lore_es: "Por sus grietas supura el calor de mil archivos fundidos. La bufanda es lo único que conserva de cuando era pequeño, y ya no recuerda por qué.",
+          lore_en: "The heat of a thousand melted files seeps through his cracks. The scarf is the only thing left from when he was little, and he no longer remembers why."
+        },
+        {
+          name: "Solardrakón",
+          img: "img/datamorfos/criaturas/brasa_4.png",
+          sig_es: "Firma Definitiva: Supernova Solar (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Solar Supernova (2 Dash charges)",
+          lore_es: "Los procesos menores lo adoran como a un sol. Él los deja arder a su alrededor para brillar un poco más.",
+          lore_en: "Lesser processes worship him like a sun. He lets them burn around him just to shine a little brighter."
+        }
+      ]
+    },
+    {
+      id: "volt",
+      color: "#ffd23a",
+      name_es: "Línea Voltio",
+      name_en: "Volt Line",
+      elem_es: "⚡ Eléctrico",
+      elem_en: "⚡ Electric",
+      passive_es: "+0,5 proyectiles por evolución (hasta +2,5)",
+      passive_en: "+0.5 projectiles per evolution stage (up to +2.5)",
+      stages: [
+        {
+          name: "Chispín",
+          img: "img/datamorfos/criaturas/volt_0.png",
+          sig_es: "Rayo Rápido (Ataque inicial)",
+          sig_en: "Quick Bolt (Starter attack)",
+          lore_es: "Muerde los cables porque en algún lugar, al otro lado, todavía queda alguien encendido. Ríe cuando salta la chispa; no siempre es de alegría.",
+          lore_en: "Bites cables because somewhere on the other end someone is still powered on. Laughs when sparks fly—not always out of joy."
+        },
+        {
+          name: "Voltina",
+          img: "img/datamorfos/criaturas/volt_1.png",
+          sig_es: "Firma: Descarga Estática (+1 carga de Dash)",
+          sig_en: "Signature: Static Discharge (+1 Dash charge)",
+          lore_es: "Roba ancho de banda a los procesos dormidos y corre antes de que despierten. Dice que lo hace por necesidad. Ya no es verdad.",
+          lore_en: "Steals bandwidth from sleeping processes and bolts before they wake. Claims she does it out of necessity. That's no longer true."
+        },
+        {
+          name: "Centella",
+          img: "img/datamorfos/criaturas/volt_2.png",
+          sig_es: "Firma: Cadena de Rayos",
+          sig_en: "Signature: Chain Lightning",
+          lore_es: "Juró proteger la red y se la entregaron llena de grietas. Ahora castiga a quien encuentra dentro, sea culpable o no.",
+          lore_en: "Swore to protect the network and was handed it full of cracks. Now she punishes anyone found inside, guilty or not."
+        },
+        {
+          name: "Tronadora",
+          img: "img/datamorfos/criaturas/volt_3.png",
+          sig_es: "Firma: Tormenta Eléctrica",
+          sig_en: "Signature: Thunderstorm",
+          lore_es: "Cuando llega, medio sistema se apaga y nadie se atreve a reiniciarlo. Le gusta el silencio que deja: es lo más parecido al respeto.",
+          lore_en: "When she arrives, half the system shuts down and no one dares reboot it. She likes the silence left behind—it's the closest thing to respect."
+        },
+        {
+          name: "Fulgora",
+          img: "img/datamorfos/criaturas/volt_4.png",
+          sig_es: "Firma Definitiva: Juicio del Trueno (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Thunder Judgment (2 Dash charges)",
+          lore_es: "Se proclamó juez del mundo digital y nadie votó. Su luz no da calor: solo sentencia.",
+          lore_en: "Proclaimed herself judge of the digital world without a vote. Her light gives no warmth—only sentences."
+        }
+      ]
+    },
+    {
+      id: "hielo",
+      color: "#62e0c8",
+      name_es: "Línea Escarcha",
+      name_en: "Frost Line",
+      elem_es: "❄️ Planta / Hielo",
+      elem_en: "❄️ Plant / Ice",
+      passive_es: "−3 % de daño recibido por evolución (hasta −15 %)",
+      passive_en: "−3% damage taken per evolution stage (up to −15%)",
+      stages: [
+        {
+          name: "Brotín",
+          img: "img/datamorfos/criaturas/hielo_0.png",
+          sig_es: "Saetas de Datos (Ataque inicial)",
+          sig_en: "Data Darts (Starter attack)",
+          lore_es: "Brotó de un archivo de cuarentena que alguien olvidó cerrar. Su tercer ojo ha visto cosas que la papelera nunca llegó a borrar.",
+          lore_en: "Sprouted from a quarantine file someone forgot to close. Its third eye has seen things the recycle bin never managed to erase."
+        },
+        {
+          name: "Escarchín",
+          img: "img/datamorfos/criaturas/hielo_1.png",
+          sig_es: "Firma: Espinas de Escarcha (+1 carga de Dash)",
+          sig_en: "Signature: Frost Thorns (+1 Dash charge)",
+          lore_es: "Le atornillaron la placa en un laboratorio sin nombre. Las espinas crecieron después, para que nadie volviera a tocarlo.",
+          lore_en: "They bolted the plate onto him in a nameless lab. The thorns grew later, so no one would ever touch him again."
+        },
+        {
+          name: "Zarzagélida",
+          img: "img/datamorfos/criaturas/hielo_2.png",
+          sig_es: "Firma: Lanza Glacial",
+          sig_en: "Signature: Glacial Lance",
+          lore_es: "Atrapa a los procesos perdidos en sus zarzas y los conserva congelados, por si algún día tiene hambre. Sus bocas susurran nombres que no son suyos.",
+          lore_en: "Traps lost processes in her brambles and keeps them frozen in case she ever gets hungry. Her mouths whisper names that aren't hers."
+        },
+        {
+          name: "Criomandrágora",
+          img: "img/datamorfos/criaturas/hielo_3.png",
+          sig_es: "Firma: Jardín Helado",
+          sig_en: "Signature: Frozen Garden",
+          lore_es: "Las cadenas no son para protegerla de los demás. Son para proteger a los demás de ella.",
+          lore_en: "The chains aren't there to protect her from others. They're there to protect others from her."
+        },
+        {
+          name: "Abisboreal",
+          img: "img/datamorfos/criaturas/hielo_4.png",
+          sig_es: "Firma Definitiva: Cero Absoluto (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Absolute Zero (2 Dash charges)",
+          lore_es: "Duerme bajo el permafrost de datos desde antes del primer arranque. El candado no tiene llave: alguien la tragó para que nunca despertara del todo.",
+          lore_en: "Sleeps beneath the data permafrost since before the first boot. The padlock has no key—someone swallowed it so it would never fully wake."
+        }
+      ]
+    },
+    {
+      id: "lomorsin",
+      color: "#ffcf4a",
+      name_es: "Línea Lomorsal",
+      name_en: "Lomorsal Line",
+      elem_es: "🪙 Hielo / Cripto",
+      elem_en: "🪙 Ice / Crypto",
+      passive_es: "+0,5 vida/s de regeneración por evolución",
+      passive_en: "+0.5 HP/s regeneration per evolution stage",
+      stages: [
+        {
+          name: "Lomorsin",
+          img: "img/datamorfos/criaturas/lomorsin_0.png",
+          sig_es: "Colmillo Helado (Ataque inicial)",
+          sig_en: "Frozen Fang (Starter attack)",
+          lore_es: "Una foca con gafas que se coló en una cámara frigorífica de criptomonedas. Desde entonces solo se mueve para contar billetes.",
+          lore_en: "A bespectacled seal that snuck into a cryptocurrency cold-storage vault. Ever since, he only moves to count bills."
+        },
+        {
+          name: "Escarchacoin",
+          img: "img/datamorfos/criaturas/lomorsin_1.png",
+          sig_es: "Firma: Calderilla Helada (+1 carga de Dash)",
+          sig_en: "Signature: Frozen Change (+1 Dash charge)",
+          lore_es: "Guarda los ahorros congelados en un bloque de hielo. Dice que así no se devalúan.",
+          lore_en: "Keeps his savings frozen inside a block of ice. Claims that way they never devalue."
+        },
+        {
+          name: "Colmillón",
+          img: "img/datamorfos/criaturas/lomorsin_2.png",
+          sig_es: "Firma: Inflación Glacial",
+          sig_en: "Signature: Glacial Inflation",
+          lore_es: "Le crecieron colmillos de morsa de tanto morder tarjetas de crédito. El lag es su forma de negociar.",
+          lore_en: "Grew walrus tusks from chewing on credit cards. Lag is his preferred negotiation tactic."
+        },
+        {
+          name: "Morsadólar",
+          img: "img/datamorfos/criaturas/lomorsin_3.png",
+          sig_es: "Firma: Crack Polar",
+          sig_en: "Signature: Polar Crash",
+          lore_es: "Se levantó a dos patas para que nadie le mirara por encima. El cinturón de campeón lo ganó en una subasta.",
+          lore_en: "Stood up on two legs so nobody could look down on him. Won his champion belt at an auction."
+        },
+        {
+          name: "Lingotón",
+          img: "img/datamorfos/criaturas/lomorsin_4.png",
+          sig_es: "Firma Definitiva: Bancarrota Ártica (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Arctic Bankruptcy (2 Dash charges)",
+          lore_es: "Forzudo de hielo y oro. Levanta lingotes congelados como pesas y nunca tiene prisa: el interés compuesto trabaja por él.",
+          lore_en: "Strongman of ice and gold. Lifts frozen bullion like dumbbells and is never in a hurry—compound interest works for him."
+        }
+      ]
+    },
+    {
+      id: "cosquillin",
+      color: "#ff6b6b",
+      name_es: "Línea Cosko",
+      name_en: "Cosko Line",
+      elem_es: "💥 Fuego / Caos",
+      elem_en: "💥 Fire / Chaos",
+      passive_es: "Impredecible: 15 % de golpes hacen ×2, 5 % la mitad",
+      passive_en: "Unpredictable: 15% of hits deal ×2 damage, 5% deal half",
+      stages: [
+        {
+          name: "Cosquillín",
+          img: "img/datamorfos/criaturas/cosquillin_0.png",
+          sig_es: "Como Panes (Ataque inicial · evoluciona a Bofetón Ofimático)",
+          sig_en: "Slapstorm (Starter attack · evolves into Office Slap)",
+          lore_es: "Una bolita de fuego que se ríe sola. Nadie sabe si va a hacerte cosquillas o a darte una bofetada; ella tampoco.",
+          lore_en: "A little fireball that giggles to herself. Nobody knows if she's going to tickle you or slap you—neither does she."
+        },
+        {
+          name: "Cosquilletón",
+          img: "img/datamorfos/criaturas/cosquillin_1.png",
+          sig_es: "Firma: Furia Ciega (+1 carga de Dash)",
+          sig_en: "Signature: Blind Fury (+1 Dash charge)",
+          lore_es: "Le salieron brazos de tanto agitarlos. Dispara a todas partes y luego pregunta, si se acuerda.",
+          lore_en: "Sprouted arms from flailing so hard. Shoots everywhere first and asks questions later—if she remembers."
+        },
+        {
+          name: "Cosquiláser",
+          img: "img/datamorfos/criaturas/cosquillin_2.png",
+          sig_es: "Firma: Barrido Cosquilleante",
+          sig_en: "Signature: Ticklish Sweep",
+          lore_es: "Encontró un láser en un vertedero de periféricos. Lo apunta con muchísima ilusión y ninguna puntería.",
+          lore_en: "Found a laser in a peripheral dump. Aims it with boundless enthusiasm and zero accuracy."
+        },
+        {
+          name: "Bazookosquis",
+          img: "img/datamorfos/criaturas/cosquillin_3.png",
+          sig_es: "Firma: Misilada Loca",
+          sig_en: "Signature: Mad Missile Barrage",
+          lore_es: "Se ató dos lanzamisiles a la espalda «para equilibrar». Los misiles tienen su propia opinión.",
+          lore_en: "Strapped two rocket launchers to her back 'for balance'. The missiles have their own opinion."
+        },
+        {
+          name: "Lady Cosk",
+          img: "img/datamorfos/criaturas/cosquillin_4.png",
+          sig_es: "Firma Definitiva: Cetro del Caos (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Scepter of Chaos (2 Dash charges)",
+          lore_es: "Se coronó reina del caos con un cetro que nunca hace lo mismo dos veces. Sonríe. Eso es lo que da miedo.",
+          lore_en: "Crowned herself Queen of Chaos with a scepter that never does the same thing twice. She's smiling. That's the scary part."
+        }
+      ]
+    },
+    {
+      id: "modemin",
+      color: "#ff5ce6",
+      name_es: "Línea Router",
+      name_en: "Router Line",
+      elem_es: "🎵 Neutro / Rítmico",
+      elem_en: "🎵 Neutral / Rhythm",
+      passive_es: "A tempo: dispara al compás de la música y cada 4.º golpe hace ×2",
+      passive_en: "A tempo: fires on the musical beat and every 4th shot deals ×2",
+      stages: [
+        {
+          name: "Modemín",
+          img: "img/datamorfos/criaturas/modemin_0.png",
+          sig_es: "Pitido de Conexión (evoluciona a Handshake 56k con Ruido Blanco)",
+          sig_en: "Dial-Up Beep (evolves into Handshake 56k with White Noise)",
+          lore_es: "Un módem de 56k que se despertó solo y no para de pitar. Si le descuelgas el teléfono, te cuelga él.",
+          lore_en: "A 56k modem that woke up on its own and won't stop beeping. Pick up the phone on him and he'll hang up on you."
+        },
+        {
+          name: "Sintetrón",
+          img: "img/datamorfos/criaturas/sintetron_1.png",
+          sig_es: "Firma: Acorde (+1 carga de Dash)",
+          sig_en: "Signature: Power Chord (+1 Dash charge)",
+          lore_es: "Descubrió que tres pitidos a la vez se llaman acorde. Desde entonces no hay forma de que se calle.",
+          lore_en: "Discovered that three beeps at once are called a chord. Since then there's no way to shut him up."
+        },
+        {
+          name: "Woofernator",
+          img: "img/datamorfos/criaturas/woofernator_2.png",
+          sig_es: "Firma: Drop de Graves",
+          sig_en: "Signature: Bass Drop",
+          lore_es: "Se instaló un altavoz de graves más grande que él. Cuando avisa de que viene el drop, hazle caso.",
+          lore_en: "Installed a subwoofer bigger than himself. When he warns you the drop is coming, listen to him."
+        },
+        {
+          name: "Mezclatrón",
+          img: "img/datamorfos/criaturas/mezclatron_3.png",
+          sig_es: "Firma: Arpegio",
+          sig_en: "Signature: Arpeggio",
+          lore_es: "Pincha en una mesa de mezclas que encontró en la basura. Los virus bailan aunque no quieran.",
+          lore_en: "DJs on a mixing desk he found in the trash. Viruses dance whether they want to or not."
+        },
+        {
+          name: "Tocata Kernel",
+          img: "img/datamorfos/criaturas/tocata_kernel_4.png",
+          sig_es: "Firma Definitiva: Tocata y Fuga (2 cargas de Dash)",
+          sig_en: "Ultimate Signature: Toccata &amp; Fugue (2 Dash charges)",
+          lore_es: "Se coló en el órgano de la catedral del Kernel y no piensa salir. Toca en re menor, como debe ser.",
+          lore_en: "Snuck into the pipe organ of the Kernel Cathedral and refuses to leave. Plays in D minor, as it should be."
+        }
+      ]
+    }
+  ];
+
+  var curLang = "es";
+  var curLineIdx = 0;
+  var curStageIdx = 0;
+
+  var dexLineTabs = document.getElementById("dexLineTabs");
+  var dexEvoStrip = document.getElementById("dexEvoStrip");
+  var dexStageLabel = document.getElementById("dexStageLabel");
+  var dexLevelLabel = document.getElementById("dexLevelLabel");
+  var dexBigSprite = document.getElementById("dexBigSprite");
+  var dexCreatureName = document.getElementById("dexCreatureName");
+  var dexElemPill = document.getElementById("dexElemPill");
+  var dexLoreText = document.getElementById("dexLoreText");
+  var dexPassiveText = document.getElementById("dexPassiveText");
+  var dexSignatureText = document.getElementById("dexSignatureText");
+
+  function renderDatadex() {
+    var line = LINES[curLineIdx];
+    var st = line.stages[curStageIdx];
+
+    // Render 6 line buttons
+    dexLineTabs.innerHTML = "";
+    LINES.forEach(function (ln, idx) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "dex-line-btn" + (idx === curLineIdx ? " active" : "");
+      btn.style.setProperty("--line-col", ln.color);
+      var iconImg = ln.stages[0].img;
+      var lName = curLang === "en" ? ln.name_en : ln.name_es;
+      var lElem = curLang === "en" ? ln.elem_en : ln.elem_es;
+      btn.innerHTML =
+        '<img src="' + iconImg + '" alt="' + ln.stages[0].name + '">' +
+        '<span class="ln-name">' + lName + '</span>' +
+        '<span class="ln-elem">' + lElem + '</span>';
+      btn.addEventListener("click", function () {
+        curLineIdx = idx;
+        renderDatadex();
+      });
+      dexLineTabs.appendChild(btn);
+    });
+
+    // Update main creature inspector
+    dexStageLabel.textContent = (curLang === "en" ? STAGE_NAMES_EN : STAGE_NAMES_ES)[curStageIdx];
+    dexLevelLabel.textContent = STAGE_LEVELS[curStageIdx];
+    dexBigSprite.src = st.img;
+    dexBigSprite.alt = st.name;
+    dexCreatureName.textContent = st.name;
+    dexCreatureName.style.color = line.color;
+    dexElemPill.textContent = (curLang === "en" ? line.name_en + " · " + line.elem_en : line.name_es + " · " + line.elem_es);
+    dexLoreText.textContent = "«" + (curLang === "en" ? st.lore_en : st.lore_es) + "»";
+    dexPassiveText.textContent = curLang === "en" ? line.passive_en : line.passive_es;
+    dexSignatureText.innerHTML = curLang === "en" ? st.sig_en : st.sig_es;
+
+    // Render 5 evolution stages strip
+    dexEvoStrip.innerHTML = "";
+    line.stages.forEach(function (s, sIdx) {
+      var step = document.createElement("button");
+      step.type = "button";
+      step.className = "dex-evo-step" + (sIdx === curStageIdx ? " active" : "");
+      step.innerHTML =
+        '<span class="st-num">' + STAGE_LEVELS[sIdx] + '</span>' +
+        '<img src="' + s.img + '" alt="' + s.name + '">' +
+        '<span class="st-name">' + s.name + '</span>';
+      step.addEventListener("click", function () {
+        curStageIdx = sIdx;
+        renderDatadex();
+      });
+      dexEvoStrip.appendChild(step);
+    });
+  }
+
+  renderDatadex();
+
+  /* ---------- 5. BILINGUAL SWITCH (ES / EN) ---------- */
+  var langToggle = document.getElementById("langToggle");
+  var dmSubImg = document.getElementById("dmSubImg");
+
+  function setLang(lang) {
+    curLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-es]").forEach(function (el) {
+      var txt = el.getAttribute("data-" + lang);
+      if (txt) el.textContent = txt;
+    });
+    if (dmSubImg) {
+      dmSubImg.alt = lang === "en" ? "Survivors of the Digital Realm" : "Supervivientes del Reino Digital";
+    }
+    if (langToggle) {
+      langToggle.textContent = lang === "es" ? "ES ▸ EN" : "EN ▸ ES";
+    }
+    renderDatadex();
+  }
+
+  if (langToggle) {
+    langToggle.addEventListener("click", function () {
+      setLang(curLang === "es" ? "en" : "es");
+    });
+  }
+
+  /* ---------- 6. DATAMORFOS SYNTHWAVE BACKGROUND CANVAS (from fondo_menu.gd) ---------- */
+  var canvas = document.getElementById("dm-bg-canvas");
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext("2d");
+    var gemImgs = [0, 1, 2, 3].map(function (i) {
+      var im = new Image();
+      im.src = "img/datamorfos/ui/gema_" + i + ".png";
+      return im;
+    });
+
+    var frags = [];
+    for (var i = 0; i < 36; i++) {
+      frags.push({
+        x: Math.random(),
+        y: Math.random(),
+        spd: 0.3 + Math.random() * 0.7,
+        gem: i % 4,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+
+    function resizeCanvas() {
+      var rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = Math.min(window.innerWidth, 1440);
+      canvas.height = Math.min(Math.max(rect.height, 720), 1800);
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    var t0 = performance.now();
+    function drawBg(now) {
+      var t = (now - t0) * 0.001;
+      var w = canvas.width;
+      var h = canvas.height;
+      var hz = h * 0.56;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Neon synthwave sun
+      var sx = w * 0.5;
+      var sy = hz;
+      for (var k = 0; k < 10; k++) {
+        var r = 260 - k * 18;
+        ctx.beginPath();
+        ctx.arc(sx, sy, r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255," + Math.round((0.25 + k * 0.05) * 255) + ",153," + (0.035 + k * 0.012) + ")";
+        ctx.fill();
+      }
+
+      // Ground plane
+      ctx.fillStyle = "rgba(8, 3, 30, 0.92)";
+      ctx.fillRect(0, hz, w, h - hz);
+
+      // Horizon magenta line
+      ctx.strokeStyle = "rgba(255, 102, 230, 0.9)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, hz);
+      ctx.lineTo(w, hz);
+      ctx.stroke();
+
+      // Perspective vertical lines
+      ctx.strokeStyle = "rgba(51, 230, 255, 0.32)";
+      ctx.lineWidth = 1.5;
+      for (var j = -14; j <= 14; j++) {
+        ctx.beginPath();
+        ctx.moveTo(w * 0.5 + j * 42, hz);
+        ctx.lineTo(w * 0.5 + j * 270, h);
+        ctx.stroke();
+      }
+
+      // Moving horizontal perspective lines
+      var fase = (t * 0.35) % 1;
+      for (var m = 0; m < 14; m++) {
+        var kk = (m + fase) / 14;
+        var yy = hz + (h - hz) * kk * kk;
+        ctx.strokeStyle = "rgba(51, 230, 255," + (0.12 + 0.55 * kk) + ")";
+        ctx.lineWidth = 1 + kk * 1.4;
+        ctx.beginPath();
+        ctx.moveTo(0, yy);
+        ctx.lineTo(w, yy);
+        ctx.stroke();
+      }
+
+      // Floating data fragments (gems)
+      for (var fIdx = 0; fIdx < frags.length; fIdx++) {
+        var f = frags[fIdx];
+        var fy = (((f.y - t * 0.03 * f.spd) % 1) + 1) % 1 * (h + 60) - 30;
+        var fx = f.x * w + Math.sin(t * f.spd + f.phase) * 20;
+        var gImg = gemImgs[f.gem];
+        if (gImg && gImg.complete && gImg.naturalWidth > 0) {
+          ctx.save();
+          ctx.translate(fx, fy);
+          ctx.rotate(t * f.spd + f.phase);
+          ctx.globalAlpha = 0.22 + 0.45 * f.spd;
+          var sz = 18 * f.spd;
+          ctx.drawImage(gImg, -sz / 2, -sz / 2, sz, sz);
+          ctx.restore();
+        }
+      }
+
+      requestAnimationFrame(drawBg);
+    }
+
+    if (!window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      requestAnimationFrame(drawBg);
+    }
+  }
+})();
+</script>
+</body>
+</html>
