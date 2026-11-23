@@ -57,7 +57,7 @@
     <article class="tarjeta" style="--c:#e8b23a">
       <a class="foto" href="LomoXGames/#matritellus"><img src="img/matritellus_portada.jpg" alt="Captura de Matritellus sobre Madridejos" loading="lazy"><img class="sprite" src="img/matritellus_escudo.png" alt="" width="88" height="88"></a>
       <div class="cuerpo">
-        <div class="cab"><h3>Matritellus</h3><span class="estado ok">v0.0.21</span></div>
+        <div class="cab"><h3>Matritellus</h3><span class="estado ok" data-release-repo="LomoXSoft/Matritellus" data-release-json="LomoXGames/matritellus_release.json">v0.0.21</span></div>
         <p>Juego de mundo abierto en 3D sobre Madridejos (Toledo) bajo LomoXGames. Calles y casas levantadas con datos reales (Catastro, IGN, OSM) y edificios hechos a mano, misiones costumbristas, Puntos Cívicos, 6 emisoras de radio, recreativos jugables y manchego de verdad.</p>
         <ul class="tags"><li>Godot 4.7.2</li><li>Mundo abierto 3D</li><li>Windows · Android · Linux</li><li>LomoXGames</li></ul>
         <div class="botones"><a class="btn" href="LomoXGames/#matritellus">Ver en LomoXGames</a><a class="btn alt" href="LomoXGames/#matritellus-descargas">Descargas</a></div>
@@ -166,7 +166,14 @@
         var label = versionLabel(release && release.tag_name);
         if (label) badge.textContent = label;
       }).catch(function () {
-        /* Petición fallida: se conserva la versión escrita en el HTML. */
+        var fallbackJson = badge.getAttribute("data-release-json");
+        if (!fallbackJson) return;
+        fetch(fallbackJson).then(function (r) {
+          return r.ok ? r.json() : null;
+        }).then(function (d) {
+          var lbl = versionLabel(d && (d.tag_name || d.version));
+          if (lbl) badge.textContent = lbl;
+        }).catch(function () {});
       }).then(function () {
         if (timer) clearTimeout(timer);
       });

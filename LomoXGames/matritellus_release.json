@@ -1,0 +1,12 @@
+{
+  "tag_name": "v0.0.22",
+  "version": "0.0.22",
+  "date": "23/11/2026",
+  "published_at": "2026-11-23T12:00:00Z",
+  "notes": "Gran repaso completo del Creador de personajes y vecinos: parpadeo orgánico no periódico en todos los personajes (en juego, cinemáticas y creador); botón «Aleatorio» independiente en Lustre y en Pintas (`R` / `Y` / táctil); peinados refinados (−71,5 % triángulos, sin huecos ni viseras) con «Cortito» y «Cuatro pelos»; barbas y cejas curvadas a la cabeza con «Enfadás», «Preocupás» y «De abuelo»; ropa 3D refinada (−61,5 % triángulos, 0 % clipping) más «Traje con corbata», «Vestido», «Camisa hawaiana» y «Bata»; sombreros esculpidos desde cero (pañoleta manchega reservada a ancianas en NPCs) más «Sombrero de cocinero»; los 14 calzados esculpidos desde cero (hilo delantero en chanclas, tacones con arco real) más «Zapatos de misa» y «Zuecos»; complementos pulidos y rehechos desde cero (corbata, pajarita, delantal, bufanda, Wayfarer, aviador, aros bien orientados y ajuste automático sobre ropa gruesa) más 11 nuevos (rectangulares, ojo de gato, corazón, monóculo, parche de pirata, flores, botones negros, cruz colgante, cámara de fotos, collar de flores y gargantilla); 6 estilos nuevos de ojos, 2 colores (grises y violetas) y pestañas «Con rabillo» sin chocar con las cejas; complexiones ajustadas con ropa, manos y pies proporcionales; y reparto coherente por edad y género en los vecinos.",
+  "assets": {
+    "windows": "https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.22/Matritellus-0.0.22-Windows.exe",
+    "android": "https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.22/Matritellus-0.0.22-Android.apk",
+    "linux": "https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.22/Matritellus-0.0.22-Linux.tar.gz"
+  }
+}

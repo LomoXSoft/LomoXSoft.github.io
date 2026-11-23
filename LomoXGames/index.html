@@ -80,7 +80,7 @@
       <article class="spot-card spot-mat">
         <div class="spot-media">
           <span class="spot-badge-top" data-es="MUNDO ABIERTO 3D · MADRIDEJOS" data-en="3D OPEN WORLD · MADRIDEJOS">MUNDO ABIERTO 3D · MADRIDEJOS</span>
-          <span class="spot-version">v0.0.21</span>
+          <span class="spot-version" id="matSpotVer">v0.0.21</span>
           <img class="cover" src="img/matritellus/shots/titulo.jpg" alt="Matritellus — Un lugar de La Mancha">
           <img class="spot-corner-icon" src="img/matritellus/crest.png" alt="Escudo de Matritellus">
         </div>
@@ -101,7 +101,7 @@
           </ul>
           <div class="spot-actions">
             <a class="btn" href="#matritellus" data-es="Ficha y Tráiler ▼" data-en="Details &amp; Trailer ▼">Ficha y Tráiler ▼</a>
-            <a class="btn alt" href="#matritellus-descargas" data-es="Descargas v0.0.21" data-en="Downloads v0.0.21">Descargas v0.0.21</a>
+            <a class="btn alt" id="matSpotDlBtn" href="#matritellus-descargas" data-es="Descargas v0.0.21" data-en="Downloads v0.0.21">Descargas v0.0.21</a>
           </div>
         </div>
       </article>
@@ -214,18 +214,18 @@
         <div id="matritellus-descargas" class="mat-dl-box">
           <div class="mat-dl-head">
             <strong data-es="INSTALADORES MULTIPLATAFORMA" data-en="CROSS-PLATFORM INSTALLERS">INSTALADORES MULTIPLATAFORMA</strong>
-            <span class="mat-dl-badge">v0.0.21 · 22/11/2026</span>
+            <span class="mat-dl-badge" id="matDlBadge">v0.0.21 · 22/11/2026</span>
           </div>
           <div class="mat-dl-grid">
-            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+            <a class="dl-item" id="matDlWin" href="https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.21/Matritellus-0.0.21-Windows.exe">
               <span class="dl-os">🪟 Windows</span>
               <span class="dl-ext">Instalador .exe</span>
             </a>
-            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+            <a class="dl-item" id="matDlApk" href="https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.21/Matritellus-0.0.21-Android.apk">
               <span class="dl-os">🤖 Android</span>
               <span class="dl-ext">Paquete .apk</span>
             </a>
-            <a class="dl-item" href="https://github.com/LomoXSoft/Matritellus/releases/latest">
+            <a class="dl-item" id="matDlLin" href="https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.21/Matritellus-0.0.21-Linux.tar.gz">
               <span class="dl-os">🐧 Linux / Steam</span>
               <span class="dl-ext">.tar.gz + script</span>
             </a>
@@ -430,13 +430,13 @@
       </div>
     </div>
 
-    <!-- EXPANDABLE VERSION HISTORY (v0.0.1 - v0.0.21) -->
+    <!-- EXPANDABLE VERSION HISTORY (v0.0.1 - latest) -->
     <details class="mat-changelog">
       <summary>
-        <span data-es="📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)" data-en="📜 Development Log &amp; Published Releases (v0.0.1 → v0.0.21)">📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)</span>
+        <span id="matChangelogSummary" data-es="📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)" data-en="📜 Development Log &amp; Published Releases (v0.0.1 → v0.0.21)">📜 Diario de desarrollo y versiones publicadas (v0.0.1 → v0.0.21)</span>
         <span data-es="Desplegar ▼" data-en="Expand ▼">Desplegar ▼</span>
       </summary>
-      <div class="mat-changelog-body">
+      <div class="mat-changelog-body" id="matChangelogBody">
         <div class="ver-row">
           <div class="ver-head"><span class="ver-tag">v0.0.21</span><span class="ver-date">22/11/2026</span></div>
           <p>El cruce de los semáforos: las cinco esquinas hechas a mano (Seguros Sopiss con vendedora, cliente y señora de la limpieza tarareando de noche, Clínica Dental, Santa Ana 2, casa del mirador y beige del Salvador) y semáforos que paran a los coches y parpadean en ámbar de madrugada o si los tiras; calles Tembleque, Delicias, Reina Sofía, Parra, Descanso y Pastora.</p>
@@ -1432,6 +1432,117 @@
     if (!window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       requestAnimationFrame(drawBg);
     }
+  }
+
+  /* ---------- 7. MATRITELLUS DYNAMIC RELEASE AUTO-UPDATER ---------- */
+  if (typeof fetch === "function") {
+    function formatDateES(isoOrDate) {
+      if (!isoOrDate) return "";
+      if (/^\d{2}\/\d{2}\/\d{4}$/.test(isoOrDate)) return isoOrDate;
+      var d = new Date(isoOrDate);
+      if (isNaN(d.getTime())) return "";
+      var dd = String(d.getDate()).padStart(2, "0");
+      var mm = String(d.getMonth() + 1).padStart(2, "0");
+      var yyyy = d.getFullYear();
+      return dd + "/" + mm + "/" + yyyy;
+    }
+
+    function applyMatritellusRelease(data) {
+      if (!data) return;
+      var rawTag = String(data.tag_name || data.version || "").trim();
+      if (!rawTag) return;
+      var verClean = rawTag.replace(/^v/i, "");
+      var vTag = "v" + verClean;
+      var dateStr = data.date || formatDateES(data.published_at);
+
+      var spotVer = document.getElementById("matSpotVer");
+      if (spotVer) spotVer.textContent = vTag;
+
+      var spotDlBtn = document.getElementById("matSpotDlBtn");
+      if (spotDlBtn) {
+        spotDlBtn.setAttribute("data-es", "Descargas " + vTag);
+        spotDlBtn.setAttribute("data-en", "Downloads " + vTag);
+        spotDlBtn.textContent = (curLang === "en" ? "Downloads " : "Descargas ") + vTag;
+      }
+
+      var dlBadge = document.getElementById("matDlBadge");
+      if (dlBadge) {
+        dlBadge.textContent = dateStr ? (vTag + " · " + dateStr) : vTag;
+      }
+
+      var baseDl = "https://github.com/LomoXSoft/Matritellus/releases/download/" + vTag + "/Matritellus-" + verClean;
+      var winUrl = (data.assets && data.assets.windows) || (baseDl + "-Windows.exe");
+      var apkUrl = (data.assets && data.assets.android) || (baseDl + "-Android.apk");
+      var linUrl = (data.assets && data.assets.linux) || (baseDl + "-Linux.tar.gz");
+
+      if (Array.isArray(data.assets)) {
+        data.assets.forEach(function (a) {
+          var n = String((a && a.name) || "").toLowerCase();
+          var u = a && a.browser_download_url;
+          if (!u) return;
+          if (n.endsWith(".exe")) winUrl = u;
+          else if (n.endsWith(".apk")) apkUrl = u;
+          else if (n.endsWith(".tar.gz")) linUrl = u;
+        });
+      }
+
+      var dlWin = document.getElementById("matDlWin");
+      var dlApk = document.getElementById("matDlApk");
+      var dlLin = document.getElementById("matDlLin");
+      if (dlWin) dlWin.href = winUrl;
+      if (dlApk) dlApk.href = apkUrl;
+      if (dlLin) dlLin.href = linUrl;
+
+      var clSummary = document.getElementById("matChangelogSummary");
+      if (clSummary) {
+        var esSum = "📜 Diario de desarrollo y versiones publicadas (v0.0.1 → " + vTag + ")";
+        var enSum = "📜 Development Log & Published Releases (v0.0.1 → " + vTag + ")";
+        clSummary.setAttribute("data-es", esSum);
+        clSummary.setAttribute("data-en", enSum);
+        clSummary.textContent = curLang === "en" ? enSum : esSum;
+      }
+
+      var clBody = document.getElementById("matChangelogBody");
+      var notes = String(data.notes || data.body || "").trim();
+      if (clBody && notes) {
+        var firstTag = clBody.querySelector(".ver-tag");
+        if (!firstTag || firstTag.textContent.trim().toLowerCase() !== vTag.toLowerCase()) {
+          var row = document.createElement("div");
+          row.className = "ver-row";
+          var head = document.createElement("div");
+          head.className = "ver-head";
+          var tagSpan = document.createElement("span");
+          tagSpan.className = "ver-tag";
+          tagSpan.textContent = vTag;
+          var dateSpan = document.createElement("span");
+          dateSpan.className = "ver-date";
+          dateSpan.textContent = dateStr;
+          head.appendChild(tagSpan);
+          head.appendChild(dateSpan);
+          var p = document.createElement("p");
+          p.textContent = notes;
+          row.appendChild(head);
+          row.appendChild(p);
+          clBody.insertBefore(row, clBody.firstChild);
+        }
+      }
+    }
+
+    // 1. Try live GitHub Releases API first; 2. Fall back to local matritellus_release.json (for private repo)
+    fetch("https://api.github.com/repos/LomoXSoft/Matritellus/releases/latest", {
+      headers: { Accept: "application/vnd.github+json" }
+    }).then(function (r) {
+      if (!r.ok) throw new Error("private or unavailable");
+      return r.json();
+    }).then(function (rel) {
+      applyMatritellusRelease(rel);
+    }).catch(function () {
+      fetch("matritellus_release.json").then(function (r2) {
+        return r2.ok ? r2.json() : null;
+      }).then(function (localRel) {
+        if (localRel) applyMatritellusRelease(localRel);
+      }).catch(function () {});
+    });
   }
 })();
 </script>
