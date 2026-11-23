@@ -34,13 +34,16 @@
         <span class="x-red">LOMO</span><span class="x-gold">X</span><span class="x-blue">GAMES</span>
       </a>
     </div>
-    <nav class="nav-links" aria-label="Navegación principal">
+    <div class="topbar-actions">
+      <button type="button" id="langToggle" class="lang-btn" aria-label="Cambiar idioma / Switch language">ES / EN</button>
+      <button type="button" id="menuToggle" class="menu-btn" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">☰</button>
+    </div>
+    <nav class="nav-links" id="mainNav" aria-label="Navegación principal">
       <a href="#juegos" data-es="Juegos" data-en="Games">Juegos</a>
       <a class="nav-mat" href="#matritellus">Matritellus</a>
       <a class="nav-dm" href="#datamorfos">Datamorfos</a>
       <a href="#datadex">Datadex</a>
       <a href="#estudio" data-es="El Estudio" data-en="Studio">El Estudio</a>
-      <button type="button" id="langToggle" class="lang-btn" aria-label="Cambiar idioma / Switch language">ES / EN</button>
     </nav>
   </div>
 </header>
@@ -226,8 +229,8 @@
               <span class="dl-ext">Paquete .apk</span>
             </a>
             <a class="dl-item" id="matDlLin" href="https://github.com/LomoXSoft/Matritellus/releases/download/v0.0.21/Matritellus-0.0.21-Linux.tar.gz">
-              <span class="dl-os">🐧 Linux / Steam</span>
-              <span class="dl-ext">.tar.gz + script</span>
+              <span class="dl-os">🐧 Linux / SteamOS</span>
+              <span class="dl-ext">Nativo .tar.gz</span>
             </a>
           </div>
         </div>
@@ -531,8 +534,10 @@
       <!-- Active Creature Inspector -->
       <div class="dex-main-grid">
         <div class="dex-stage-pedestal">
-          <span class="dex-stage-badge" id="dexStageLabel">ETAPA 1/5 · BYTEFORMO</span>
-          <span class="dex-level-badge" id="dexLevelLabel">NV 1</span>
+          <div class="dex-pedestal-top">
+            <span class="dex-stage-badge" id="dexStageLabel">ETAPA 1/5 · BYTEFORMO</span>
+            <span class="dex-level-badge" id="dexLevelLabel">NV 1</span>
+          </div>
           <img class="dex-big-sprite" id="dexBigSprite" src="img/datamorfos/criaturas/brasa_0.png" alt="Brasín">
           <div class="dex-pedestal-ring" aria-hidden="true"></div>
         </div>
@@ -829,7 +834,24 @@
 (function () {
   "use strict";
 
-  /* ---------- 1. STUDIO INTRO VIDEO PLAYER ---------- */
+  /* ---------- 1. STUDIO INTRO VIDEO PLAYER & MOBILE MENU ---------- */
+  var menuToggle = document.getElementById("menuToggle");
+  var mainNav = document.getElementById("mainNav");
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", function () {
+      var isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
+
   var playIntroBtn = document.getElementById("playIntroBtn");
   var logoStage = document.getElementById("logoStage");
   var introWrap = document.getElementById("introWrap");
